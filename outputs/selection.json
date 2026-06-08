@@ -1,0 +1,224 @@
+{
+  "selected": [
+    "L09169720",
+    "L0696172",
+    "L09169718",
+    "L0696188",
+    "L0696190"
+  ],
+  "assignment": [
+    {
+      "Piece": "HANDLE LEFT FACING",
+      "Leather": "L09169720",
+      "Qty": 0.32,
+      "RequiredQuality": 2
+    },
+    {
+      "Piece": "HANDLE LEFT FACING",
+      "Leather": "L0696172",
+      "Qty": 39.68,
+      "RequiredQuality": 2
+    },
+    {
+      "Piece": "HANGTAG FACING",
+      "Leather": "L09169718",
+      "Qty": 20.0,
+      "RequiredQuality": 4
+    },
+    {
+      "Piece": "GUSSET LEFT RIGHT ANCHOR",
+      "Leather": "L0696190",
+      "Qty": 20.0,
+      "RequiredQuality": 2
+    },
+    {
+      "Piece": "BACK WRAP SNAP",
+      "Leather": "L09169718",
+      "Qty": 40.0,
+      "RequiredQuality": 1
+    },
+    {
+      "Piece": "FLAP FACING SNAP PATCH",
+      "Leather": "L09169720",
+      "Qty": 20.0,
+      "RequiredQuality": 4
+    },
+    {
+      "Piece": "FRONT WRAP SNAP",
+      "Leather": "L09169718",
+      "Qty": 80.0,
+      "RequiredQuality": 1
+    },
+    {
+      "Piece": "GUSSET",
+      "Leather": "L09169720",
+      "Qty": 35.56,
+      "RequiredQuality": 2
+    },
+    {
+      "Piece": "GUSSET",
+      "Leather": "L0696172",
+      "Qty": 4.44,
+      "RequiredQuality": 2
+    },
+    {
+      "Piece": "FRONT RIGHT ANCHOR TOP",
+      "Leather": "L09169718",
+      "Qty": 20.0,
+      "RequiredQuality": 1
+    },
+    {
+      "Piece": "BOTTOM",
+      "Leather": "L09169720",
+      "Qty": 2.2,
+      "RequiredQuality": 4
+    },
+    {
+      "Piece": "BOTTOM",
+      "Leather": "L0696172",
+      "Qty": 8.84,
+      "RequiredQuality": 4
+    },
+    {
+      "Piece": "BOTTOM",
+      "Leather": "L09169718",
+      "Qty": 0.37,
+      "RequiredQuality": 4
+    },
+    {
+      "Piece": "BOTTOM",
+      "Leather": "L0696188",
+      "Qty": 4.63,
+      "RequiredQuality": 4
+    },
+    {
+      "Piece": "BOTTOM",
+      "Leather": "L0696190",
+      "Qty": 3.96,
+      "RequiredQuality": 4
+    },
+    {
+      "Piece": "FLAP TOP BIDNING",
+      "Leather": "L0696188",
+      "Qty": 20.0,
+      "RequiredQuality": 1
+    },
+    {
+      "Piece": "BACK SLASH POCKET INTERIOR PATCH",
+      "Leather": "L09169720",
+      "Qty": 0.16,
+      "RequiredQuality": 1
+    },
+    {
+      "Piece": "BACK SLASH POCKET INTERIOR PATCH",
+      "Leather": "L0696172",
+      "Qty": 19.84,
+      "RequiredQuality": 1
+    },
+    {
+      "Piece": "HANGTAG TOP",
+      "Leather": "L09169720",
+      "Qty": 0.16,
+      "RequiredQuality": 1
+    },
+    {
+      "Piece": "HANGTAG TOP",
+      "Leather": "L0696172",
+      "Qty": 19.84,
+      "RequiredQuality": 1
+    },
+    {
+      "Piece": "HANDLE RIGHT FACING",
+      "Leather": "L09169718",
+      "Qty": 40.0,
+      "RequiredQuality": 2
+    },
+    {
+      "Piece": "FRONT HANDLE TOP",
+      "Leather": "L09169720",
+      "Qty": 0.16,
+      "RequiredQuality": 1
+    },
+    {
+      "Piece": "FRONT HANDLE TOP",
+      "Leather": "L0696172",
+      "Qty": 19.84,
+      "RequiredQuality": 1
+    },
+    {
+      "Piece": "BACK SNAP PATCH",
+      "Leather": "L0696172",
+      "Qty": 19.84,
+      "RequiredQuality": 1
+    },
+    {
+      "Piece": "BACK SNAP PATCH",
+      "Leather": "L09169718",
+      "Qty": 0.16,
+      "RequiredQuality": 1
+    },
+    {
+      "Piece": "FLAP TOP",
+      "Leather": "L09169720",
+      "Qty": 0.38,
+      "RequiredQuality": 1
+    },
+    {
+      "Piece": "FLAP TOP",
+      "Leather": "L09169718",
+      "Qty": 6.71,
+      "RequiredQuality": 1
+    },
+    {
+      "Piece": "FLAP TOP",
+      "Leather": "L0696188",
+      "Qty": 5.24,
+      "RequiredQuality": 1
+    },
+    {
+      "Piece": "FLAP TOP",
+      "Leather": "L0696190",
+      "Qty": 7.66,
+      "RequiredQuality": 1
+    },
+    {
+      "Piece": "BACK HANDLE TOP",
+      "Leather": "L0696190",
+      "Qty": 20.0,
+      "RequiredQuality": 1
+    }
+  ],
+  "objective_value": 92436562.51999998,
+  "scores": {
+    "L09169726": 23717439.18,
+    "L09169720": 16498538.72,
+    "L09169698": 19590089.77,
+    "L0696178": 18754515.03,
+    "L0696174": 17783022.05,
+    "L0696170": 17716364.61,
+    "L0696160": 18685560.95,
+    "L0696164": 19918379.99,
+    "L09169692": 16597900.37,
+    "L0696172": 19749778.37,
+    "L0696176": 19299309.12,
+    "L0696182": 19096795.1,
+    "L0696166": 16952076.57,
+    "L0696168": 19292492.76,
+    "L09169728": 18403675.25,
+    "L09169718": 16427992.9,
+    "L0696188": 18779157.07,
+    "L0696162": 17483156.6,
+    "L0696154": 18395869.84,
+    "L0696158": 19141877.47,
+    "L0696186": 18500252.7,
+    "L09169722": 23120397.0,
+    "L09169716": 19543525.66,
+    "L09169724": 25692022.19,
+    "L0696184": 16626267.6,
+    "L0696180": 17055960.54,
+    "L09169696": 22335639.16,
+    "L0696190": 18560804.17,
+    "L0696152": 19845399.92,
+    "L0696156": 16407813.95
+  }
+}

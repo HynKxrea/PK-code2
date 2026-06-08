@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LeatherQualityReport hide_id="1e82de36-6138-403d-8740-762dddd76cd0" hide_code="6. L0696162" exported_at="2026-04-20T13:40:45" source="https://pk.comelz.cloud/pk_prod">
+    <HideInfo>
+        <HideID>1e82de36-6138-403d-8740-762dddd76cd0</HideID>
+        <HideCode>6. L0696162</HideCode>
+        <PageURL>https://pk.comelz.cloud/pk_prod/materials-archive/hide/1e82de36-6138-403d-8740-762dddd76cd0</PageURL>
+        <Dimensions>
+            <Width>2698.99mm</Width>
+            <Height>1377.29mm</Height>
+            <ViewBox>0 0 2699 1377</ViewBox>
+        </Dimensions>
+    </HideInfo>
+    <QualitySummary>
+        <SupplierArea_mm2>2248779.22</SupplierArea_mm2>
+        <SupplierArea_m2>2.248779</SupplierArea_m2>
+        <TotalGradedArea_mm2>2248779.22</TotalGradedArea_mm2>
+        <TotalGradedArea_m2>2.248779</TotalGradedArea_m2>
+    </QualitySummary>
+    <QualityLevels>
+        <Level name="Q1" label="최상" color="#ff0000" index="0">
+            <Area_mm2>1500558.21</Area_mm2>
+            <Area_m2>1.500558</Area_m2>
+            <Percentage>66.7277</Percentage>
+            <HasData>true</HasData>
+        </Level>
+        <Level name="Q2" label="양호" color="#ffff00" index="1">
+            <Area_mm2>0.00</Area_mm2>
+            <Area_m2>0.000000</Area_m2>
+            <Percentage>0.0000</Percentage>
+            <HasData>false</HasData>
+        </Level>
+        <Level name="Q3" label="보통" color="#00ff00" index="2">
+            <Area_mm2>372405.72</Area_mm2>
+            <Area_m2>0.372406</Area_m2>
+            <Percentage>16.5604</Percentage>
+            <HasData>true</HasData>
+        </Level>
+        <Level name="Q4" label="주의" color="#00ffff" index="3">
+            <Area_mm2>236455.90</Area_mm2>
+            <Area_m2>0.236456</Area_m2>
+            <Percentage>10.5149</Percentage>
+            <HasData>true</HasData>
+        </Level>
+        <Level name="Q5" label="결함" color="#0000ff" index="4">
+            <Area_mm2>142634.10</Area_mm2>
+            <Area_m2>0.142634</Area_m2>
+            <Percentage>6.3427</Percentage>
+            <HasData>true</HasData>
+        </Level>
+        <Level name="Q6" label="Q6" color="#dddddd" index="5">
+            <Area_mm2>0.00</Area_mm2>
+            <Area_m2>0.000000</Area_m2>
+            <Percentage>0.0000</Percentage>
+            <HasData>false</HasData>
+        </Level>
+        <Level name="Q7" label="Q7" color="#ff00ff" index="6">
+            <Area_mm2>0.00</Area_mm2>
+            <Area_m2>0.000000</Area_m2>
+            <Percentage>0.0000</Percentage>
+            <HasData>false</HasData>
+        </Level>
+    </QualityLevels>
+</LeatherQualityReport>
