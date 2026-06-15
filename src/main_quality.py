@@ -3,6 +3,7 @@ Usage: python3 src/main_quality.py
 """
 import os
 import json
+import time
 
 from data.preprocessing import (
     leathers,
@@ -19,6 +20,8 @@ from selection.selection import solve_selection_mip
 
 
 def main():
+    t_start = time.perf_counter()
+
     # Data summary (inline, previously in utils.summary)
     leather_df = pd.DataFrame.from_dict(
         leathers,
@@ -40,14 +43,21 @@ def main():
         print('Total leathers:', len(leathers))
 
     # Build data
+    t0 = time.perf_counter()
     data = merge_data(pieces, demand)
+    t_build = time.perf_counter() - t0
+    print(f"\n[TIMER] build_data: {t_build:.3f}s")
 
     # Solve selection MIP
+    t0 = time.perf_counter()
     try:
         result = solve_selection_mip(data, leathers)
     except Exception as e:
         print('\n❌ Solver error or ortools not available:', e)
         result = None
+    t_solve = time.perf_counter() - t0
+    print(f"[TIMER] solve_selection_mip: {t_solve:.3f}s")
+    print(f"[TIMER] elapsed_until_output: {time.perf_counter() - t_start:.3f}s")
 
     # Problem summary
     print('\n' + '=' * 70)
@@ -70,6 +80,7 @@ def main():
     # Present results
     if result is None:
         print('\n❌ No Feasible Solution Found or solver failed')
+        print(f"[TIMER] total_runtime: {time.perf_counter() - t_start:.3f}s")
         return
 
     scores = calculate_leather_score(leathers)
@@ -140,6 +151,7 @@ def main():
         json.dump(out, f, indent=2)
 
     print('\nSaved summary to outputs/selection.json')
+    print(f"[TIMER] total_runtime: {time.perf_counter() - t_start:.3f}s")
 
 
 if __name__ == '__main__':

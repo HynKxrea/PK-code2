@@ -1,5 +1,6 @@
 import json
 import os
+import csv
 import pandas as pd
 from ortools.linear_solver import pywraplp
 
@@ -10,10 +11,55 @@ from data.preprocessing import (
 
 from selection.scorer_factory import create_scorer
 
+from bottom_up.bottom_up_heuristic import max_pieces_for_pattern_on_leather
+
 
 # =====================================
 # Build Selection Model
 # =====================================
+
+
+def _load_piece_required_quality_map(csv_path: str) -> dict:
+    """Load required quality grade (Q1..Q5 -> 1..5) from piece_catalog_area_rule.csv.
+
+    The catalog 'name' column includes pattern prefixes; we normalize to the
+    suffix after '__' to match piece keys used in `data`.
+    """
+
+    mapping: dict[str, int] = {}
+
+    try:
+        with open(csv_path, "r", encoding="utf-8") as f:
+            reader = csv.DictReader(f)
+            for row in reader:
+                raw_name = (row.get("name") or "").strip()
+                if not raw_name:
+                    continue
+
+                # match loader normalization: keep suffix after '__'
+                if "__" in raw_name:
+                    piece_name = raw_name.split("__", 1)[1].strip().upper()
+                else:
+                    piece_name = raw_name.strip().upper()
+
+                q = (row.get("required_quality_area_rule") or "").strip().upper()
+                if not q.startswith("Q"):
+                    continue
+
+                try:
+                    grade = int(q[1:])
+                except Exception:
+                    continue
+
+                if 1 <= grade <= 5:
+                    mapping[piece_name] = grade
+
+    except Exception:
+        # If loading fails, return empty and fall back to name-based assign_grade.
+        return {}
+
+    return mapping
+
 
 def solve_selection_mip(data, leathers, leather_scores_override=None, score_direction_override=None):
 
@@ -23,6 +69,37 @@ def solve_selection_mip(data, leathers, leather_scores_override=None, score_dire
 
     I = list(data.keys())
     J = list(leathers.keys())
+
+    # -----------------------------
+    # Required quality per piece (from piece_catalog_area_rule.csv)
+    # -----------------------------
+
+    catalog_path = os.path.join("dataset", "pieces", "piece_catalog_area_rule.csv")
+    required_quality_map = _load_piece_required_quality_map(catalog_path)
+
+    if not required_quality_map:
+        raise ValueError(
+            f"Could not load required quality mapping from {catalog_path}. "
+            "Please ensure piece_catalog_area_rule.csv exists and has required_quality_area_rule values like Q1..Q5."
+        )
+
+    required_quality = {}
+    missing_pieces = []
+
+    for i in I:
+        key = str(i).upper()
+        if key not in required_quality_map:
+            missing_pieces.append(i)
+        else:
+            required_quality[i] = int(required_quality_map[key])
+
+    if missing_pieces:
+        preview = ", ".join([str(x) for x in missing_pieces[:20]])
+        more = "" if len(missing_pieces) <= 20 else f" ... (+{len(missing_pieces) - 20} more)"
+        raise ValueError(
+            "Missing required quality entries in piece_catalog_area_rule.csv for these pieces: "
+            f"{preview}{more}"
+        )
 
     # -----------------------------
     # Leather Scores (via scorer) or override
@@ -58,7 +135,7 @@ def solve_selection_mip(data, leathers, leather_scores_override=None, score_dire
             leather_scores[j] = float(scaled)
 
     else:
-        scoring_config_path = os.path.join('data', 'scoring_config.json')
+        scoring_config_path = os.path.join('dataset', 'scoring_config.json')
         scorer, score_direction = create_scorer(scoring_config_path)
 
         for j in J:
@@ -88,29 +165,75 @@ def solve_selection_mip(data, leathers, leather_scores_override=None, score_dire
     for i in I:
         for j in J:
 
+            # y[i,j] is also bounded by demand via linking constraint; keep the tighter bound here.
+            demand_i = float(data[i]["demand"])
+
+            # Upper bound by bottom-up heuristic (no rotation, bottom-left sequential placement)
+            # This is computed on-the-fly without preprocessing.
+            try:
+                ub_ij = int(
+                    max_pieces_for_pattern_on_leather(
+                        piece_geom_attrs=data[i].get("geom_attrs"),
+                        leather_code=j,
+                        required_grade=required_quality[i],
+                        dataset_leathers_dir=os.path.join('dataset', 'leathers'),
+                    )
+                )
+            except Exception:
+                # If we cannot compute, fall back to demand upper bound (do not over-restrict).
+                ub_ij = int(demand_i)
+
+            # If heuristic returns 0 due to missing geometry, also fall back to demand.
+            if ub_ij <= 0:
+                ub_ij = int(demand_i)
+
+            ub = min(demand_i, float(ub_ij))
+
             y[i, j] = solver.NumVar(
                 0,
-                solver.infinity(),
+                ub,
                 f"y[{i},{j}]"
             )
 
     # =====================================
     # Constraint 1
-    # Quality Capacity with u_k multipliers (loaded from data/u_values.json or default 0.7)
+    # Quality Capacity with u_k multipliers (loaded from dataset/u_values.json or default 0.7)
     # =====================================
 
-    # load u values from data/u_values.json if available
-    u_values_path = os.path.join('data', 'u_values.json')
-    try:
-        with open(u_values_path, 'r') as f:
-            u_data = json.load(f)
-            u_list = u_data.get('u', [0.7]*5)
-    except Exception:
-        u_list = [0.7] * 5
+    # load u values from dataset/u_values.json if available
+    # If the file does not exist, create it with a safe default.
+    u_values_path = os.path.join('dataset', 'u_values.json')
+    default_u_list = [0.6] * 5
 
-    # ensure length 5
-    if len(u_list) < 5:
-        u_list = list(u_list) + [0.7] * (5 - len(u_list))
+    if not os.path.exists(u_values_path):
+        try:
+            os.makedirs(os.path.dirname(u_values_path), exist_ok=True)
+            with open(u_values_path, 'w', encoding='utf-8') as f:
+                json.dump({'u': default_u_list}, f, indent=2)
+        except Exception:
+            # If we can't write the file (permissions, etc.), fall back to defaults silently.
+            pass
+
+    try:
+        with open(u_values_path, 'r', encoding='utf-8') as f:
+            u_data = json.load(f)
+
+            # Prefer q1_use_all..q5_use_all if present (computed from utilization step)
+            q_keys = ["q1_use_all", "q2_use_all", "q3_use_all", "q4_use_all", "q5_use_all"]
+            if isinstance(u_data, dict) and all(k in u_data for k in q_keys):
+                u_list = [float(u_data[k]) for k in q_keys]
+            else:
+                u_list = u_data.get('u', default_u_list)
+
+            # Safety: ensure length 5
+            if not isinstance(u_list, list) or len(u_list) < 5:
+                u_list = default_u_list
+            else:
+                u_list = [float(x) for x in u_list[:5]]
+
+    except Exception:
+        print(f"Warning: Could not load u values from {u_values_path}. Using default values: {default_u_list}")
+        u_list = default_u_list
 
     for j in J:
 
@@ -124,7 +247,7 @@ def solve_selection_mip(data, leathers, leather_scores_override=None, score_dire
             solver.Sum(
                 data[i]["area"] * y[i, j]
                 for i in I
-                if assign_grade(i) <= 1
+                if required_quality[i] <= 1
             )
 
             <= Q1 * x[j] * u_list[0]
@@ -136,7 +259,7 @@ def solve_selection_mip(data, leathers, leather_scores_override=None, score_dire
             solver.Sum(
                 data[i]["area"] * y[i, j]
                 for i in I
-                if assign_grade(i) <= 2
+                if required_quality[i] <= 2
             )
 
             <= (Q1 + Q2) * x[j] * u_list[1]
@@ -148,7 +271,7 @@ def solve_selection_mip(data, leathers, leather_scores_override=None, score_dire
             solver.Sum(
                 data[i]["area"] * y[i, j]
                 for i in I
-                if assign_grade(i) <= 3
+                if required_quality[i] <= 3
             )
 
             <= (Q1 + Q2 + Q3) * x[j] * u_list[2]
@@ -160,7 +283,7 @@ def solve_selection_mip(data, leathers, leather_scores_override=None, score_dire
             solver.Sum(
                 data[i]["area"] * y[i, j]
                 for i in I
-                if assign_grade(i) <= 4
+                if required_quality[i] <= 4
             )
 
             <= (Q1 + Q2 + Q3 + Q4) * x[j] * u_list[3]
@@ -172,7 +295,7 @@ def solve_selection_mip(data, leathers, leather_scores_override=None, score_dire
             solver.Sum(
                 data[i]["area"] * y[i, j]
                 for i in I
-                if assign_grade(i) <= 5
+                if required_quality[i] <= 5
             )
 
             <= (Q1 + Q2 + Q3 + Q4 + Q5) * x[j] * u_list[4]

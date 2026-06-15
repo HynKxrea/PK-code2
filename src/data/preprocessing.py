@@ -13,17 +13,22 @@ from .loader import (
 # compute project root regardless of this file's depth
 _BASE = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..'))
 
-LEATHER_PATH = os.path.join(_BASE, "data", "L-code(_stat.xml)")
-PATTERN_PATH = os.path.join(_BASE, "data", "Pattern(.xml, .xlsx)")
-# Prefer specific pattern XML (CZ402) for demand if present; fallback to folder
-pattern_dir = os.path.join(_BASE, "data", "Pattern(.xml, .xlsx)")
+# Use dataset folder for leathers and pieces
+LEATHERS_DIR = os.path.join(_BASE, 'dataset', 'leathers')
+PIECES_DIR = os.path.join(_BASE, 'dataset', 'pieces')
 
+# For demand, prefer CZ402 XML in pieces dir if present, otherwise use pieces dir
 import glob
-cz_files = glob.glob(os.path.join(pattern_dir, 'CZ402*'))
+cz_files = glob.glob(os.path.join(PIECES_DIR, 'CZ402*'))
 if cz_files:
     DEMAND_PATH = cz_files[0]
 else:
-    DEMAND_PATH = pattern_dir
+    DEMAND_PATH = PIECES_DIR
+
+# For backward compatibility, set variables used elsewhere
+LEATHER_PATH = LEATHERS_DIR
+PATTERN_PATH = PIECES_DIR
+pattern_dir = PIECES_DIR
 
 
 # =========================

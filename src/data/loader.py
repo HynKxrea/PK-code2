@@ -1,6 +1,7 @@
 import xml.etree.ElementTree as ET
 import pandas as pd
 import os
+import glob
 
 
 # =========================
@@ -8,43 +9,70 @@ import os
 # =========================
 
 def load_leathers(folder_path):
-    leathers = {}
+    """Load leather quality areas.
 
-    for file in os.listdir(folder_path):
+    Supports two layouts:
+    1) Flat folder containing many *_stat.xml files.
+    2) Dataset layout: dataset/leathers/<leather_dir>/leather_stat.xml (nested).
 
-        if not file.endswith("_stat.xml"):
+    Returns: dict hide_code -> [Q1..Q7] areas (mm^2)
+    """
+    leathers: dict[str, list[float]] = {}
+
+    if not os.path.exists(folder_path):
+        return leathers
+
+    # Collect stat xml files (flat + recursive)
+    stat_files: list[str] = []
+
+    # flat
+    try:
+        for file in os.listdir(folder_path):
+            if file.endswith("_stat.xml"):
+                stat_files.append(os.path.join(folder_path, file))
+    except Exception:
+        pass
+
+    # recursive (dataset layout)
+    stat_files.extend(glob.glob(os.path.join(folder_path, "**", "*_stat.xml"), recursive=True))
+
+    # de-duplicate
+    stat_files = sorted(set(stat_files))
+
+    for file_path in stat_files:
+        try:
+            tree = ET.parse(file_path)
+            root = tree.getroot()
+        except Exception:
             continue
 
-        file_path = os.path.join(folder_path, file)
+        # ex) hide_code attribute like "HIDE_CODE ABC123"
+        hide_code_attr = root.attrib.get("hide_code", "")
+        code = hide_code_attr.split()[-1].strip() if hide_code_attr else ""
+        if not code:
+            # fallback: derive from folder name e.g. 012_CY817_09_L0696168_Q1_71.45pct
+            code = os.path.basename(os.path.dirname(file_path)).split("_")[-2] if "_" in os.path.basename(os.path.dirname(file_path)) else os.path.basename(os.path.dirname(file_path))
 
-        tree = ET.parse(file_path)
-        root = tree.getroot()
-
-        # ex) "HIDE_CODE ABC123"
-        code = root.attrib.get("hide_code", "unknown").split()[-1]
-
-        Q = [0] * 7
-
+        Q = [0.0] * 7
         quality_levels = root.find("QualityLevels")
-
         if quality_levels is None:
             continue
 
         for level in quality_levels.findall("Level"):
-
             name = level.attrib.get("name", "")
-
             if not name.startswith("Q"):
                 continue
-
-            q = int(name[1])
-
+            try:
+                q = int(name[1])
+            except Exception:
+                continue
             if 1 <= q <= 7:
-
                 area_node = level.find("Area_mm2")
-
-                if area_node is not None:
-                    Q[q - 1] = float(area_node.text)
+                if area_node is not None and area_node.text is not None:
+                    try:
+                        Q[q - 1] = float(area_node.text)
+                    except Exception:
+                        Q[q - 1] = 0.0
 
         leathers[code] = Q
 
@@ -92,6 +120,10 @@ def load_pieces(folder_path):
                 continue
 
             name = name_node.text.strip()
+            # Normalize names to match demand keys: if pattern name contains '__', keep the suffix part.
+            # Example: 'COH2709 A 17-21__FLAP TOP' -> 'FLAP TOP'
+            if '__' in name:
+                name = name.split('__', 1)[1].strip()
 
             # material (if present)
             mat_node = piece.find("MATERIAL")
@@ -157,7 +189,10 @@ def load_piece_materials(folder_path):
             if name_node is None:
                 continue
 
-            name = name_node.text.strip().upper()
+            raw_name = name_node.text.strip()
+            if '__' in raw_name:
+                raw_name = raw_name.split('__', 1)[1].strip()
+            name = raw_name.upper()
             mat_text = "" if mat_node is None or mat_node.text is None else mat_node.text.strip().upper()
 
             if mat_text.startswith("LTR") or "LEATHER" in mat_text:

@@ -1,9 +1,0 @@
-{
-  "method": "weighted_sum",
-  "weighted_sum": {
-    "weights": [10, 8, 6, 4, 2],
-    "normalize": false
-  },
-  "direction": "maximize",
-  "note": "Weighted-sum scoring for Q1..Q5.\n'direction' controls whether higher score is better ("maximize") or worse ("minimize")."
-}
