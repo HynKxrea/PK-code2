@@ -228,12 +228,24 @@ def main(argv: Optional[Iterable[str]] = None) -> int:
         help="Ignore pixels with alpha < this value (default: 255, ignore boundary anti-aliasing)",
     )
     parser.add_argument("--csv", default=None, help="Optional output CSV path")
+    parser.add_argument(
+        "--render-out",
+        default=None,
+        help=(
+            "Optional output directory to write classification-only PNGs. "
+            "Valid pixels are recolored by predicted class; ignored pixels keep original RGBA."
+        ),
+    )
 
     args = parser.parse_args(list(argv) if argv is not None else None)
 
     rule = ColorRule(ignore_alpha_below=int(args.alpha_min))
     target_dir = _resolve_default_dir(args.dir)
     results = count_class_pixels_in_dir(target_dir, rule=rule)
+
+    render_out_dir = Path(args.render_out) if args.render_out else None
+    if render_out_dir is not None:
+        render_out_dir.mkdir(parents=True, exist_ok=True)
 
     def dark_usage_percent(counts: Dict[str, int], base: str) -> Optional[float]:
         denom = int(counts.get(base, 0)) + int(counts.get(f"dark_{base}", 0))
@@ -263,6 +275,100 @@ def main(argv: Optional[Iterable[str]] = None) -> int:
 
     def fmt_ratio(x: Optional[float]) -> str:
         return "NA" if x is None else f"{x:.4f}"
+
+    def _counts_for_q(counts: Dict[str, int]) -> Dict[str, int]:
+        """Return a copy of counts with *dark_blue* forced to 0 (for q calc only).
+
+        Pixel classification/counting and all non-q outputs are unchanged.
+        Only q-values treat dark_blue as 0; cyan/dark_cyan stay as measured.
+        """
+
+        if not counts:
+            return counts
+        if "dark_blue" not in counts:
+            return counts
+        c2 = dict(counts)
+        c2["dark_blue"] = 0
+        return c2
+
+    def render_classification_image(image_path: Path, out_path: Path) -> None:
+        """Write a classification-only image.
+
+        - Valid pixels: recolor to the nearest reference color class (CLASS_ORDER).
+        - Ignored pixels (transparent/near-black/alpha<min): keep original RGBA.
+        """
+
+        with Image.open(image_path) as img:
+            rgba = img.convert("RGBA")
+
+            if _HAS_NUMPY:
+                base = np.asarray(rgba)
+                out = base.copy()
+
+                r = base[..., 0].astype(np.int32)
+                g = base[..., 1].astype(np.int32)
+                b = base[..., 2].astype(np.int32)
+                a = base[..., 3].astype(np.int32)
+
+                s = r + g + b
+                maxc = np.maximum(np.maximum(r, g), b)
+
+                valid = (a >= int(rule.ignore_alpha_below)) & (s > 0)
+                valid &= (maxc >= int(rule.ignore_near_black_max_channel))
+                valid &= (s >= int(rule.ignore_near_black_sum))
+
+                best_dist = np.full(r.shape, 1_000_000_000, dtype=np.int32)
+                best_idx = np.full(r.shape, -1, dtype=np.int16)
+
+                for idx, cls in enumerate(CLASS_ORDER):
+                    ref = ALL_CLASS_COLORS[cls]
+                    dist = (r - int(ref[0])) * (r - int(ref[0])) + (g - int(ref[1])) * (g - int(ref[1])) + (b - int(ref[2])) * (b - int(ref[2]))
+                    better = dist < best_dist
+                    best_dist = np.where(better, dist, best_dist)
+                    best_idx = np.where(better, idx, best_idx)
+
+                palette = np.asarray([ALL_CLASS_COLORS[cls] for cls in CLASS_ORDER], dtype=np.uint8)
+                out[..., :3][valid] = palette[best_idx[valid]]
+
+                Image.fromarray(out, mode="RGBA").save(out_path)
+                return
+
+            # No numpy fallback
+            out_pixels = []
+            for pr, pg, pb, pa in rgba.getdata():
+                # Ignored pixels: keep original
+                if pa < rule.ignore_alpha_below:
+                    out_pixels.append((pr, pg, pb, pa))
+                    continue
+                s = pr + pg + pb
+                if s <= 0:
+                    out_pixels.append((pr, pg, pb, pa))
+                    continue
+                if max(pr, pg, pb) < rule.ignore_near_black_max_channel:
+                    out_pixels.append((pr, pg, pb, pa))
+                    continue
+                if s < rule.ignore_near_black_sum:
+                    out_pixels.append((pr, pg, pb, pa))
+                    continue
+
+                best_cls = None
+                best_d = None
+                for cls in CLASS_ORDER:
+                    d = _dist2_rgb(pr, pg, pb, ALL_CLASS_COLORS[cls])
+                    if best_d is None or d < best_d:
+                        best_d = d
+                        best_cls = cls
+
+                if best_cls is None:
+                    out_pixels.append((pr, pg, pb, pa))
+                    continue
+
+                rr, gg, bb = ALL_CLASS_COLORS[best_cls]
+                out_pixels.append((int(rr), int(gg), int(bb), pa))
+
+            out_img = Image.new("RGBA", rgba.size)
+            out_img.putdata(out_pixels)
+            out_img.save(out_path)
 
     def compute_meta(image_path: Path) -> Dict[str, int]:
         with Image.open(image_path) as img:
@@ -337,11 +443,15 @@ def main(argv: Optional[Iterable[str]] = None) -> int:
 
         usage = [fmt_pct(dark_usage_percent(c, base)) for base in BASE_COLORS]
 
-        q1 = cumulative_use_decimal(c, ["red"])
-        q2 = cumulative_use_decimal(c, ["red", "yellow"])
-        q3 = cumulative_use_decimal(c, ["red", "yellow", "green"])
-        q4 = cumulative_use_decimal(c, ["red", "yellow", "green", "blue"])
-        q5 = cumulative_use_decimal(c, ["red", "yellow", "green", "blue", "cyan"])
+        if render_out_dir is not None:
+            render_classification_image(target_dir / name, render_out_dir / name)
+
+        c_q = _counts_for_q(c)
+        q1 = cumulative_use_decimal(c_q, ["red"])
+        q2 = cumulative_use_decimal(c_q, ["red", "yellow"])
+        q3 = cumulative_use_decimal(c_q, ["red", "yellow", "green"])
+        q4 = cumulative_use_decimal(c_q, ["red", "yellow", "green", "cyan"])
+        q5 = cumulative_use_decimal(c_q, ["red", "yellow", "green", "cyan", "blue"])
         q_vals = [q1, q2, q3, q4, q5]
 
         # accumulate for q*_use_all
@@ -412,11 +522,13 @@ def main(argv: Optional[Iterable[str]] = None) -> int:
     blue_use = dark_usage_percent(totals, "blue")
     cyan_use = dark_usage_percent(totals, "cyan")
 
-    q1_use = cumulative_use_decimal(totals, ["red"])
-    q2_use = cumulative_use_decimal(totals, ["red", "yellow"])
-    q3_use = cumulative_use_decimal(totals, ["red", "yellow", "green"])
-    q4_use = cumulative_use_decimal(totals, ["red", "yellow", "green", "blue"])
-    q5_use = cumulative_use_decimal(totals, ["red", "yellow", "green", "blue", "cyan"])
+    totals_q = _counts_for_q(totals)
+
+    q1_use = cumulative_use_decimal(totals_q, ["red"])
+    q2_use = cumulative_use_decimal(totals_q, ["red", "yellow"])
+    q3_use = cumulative_use_decimal(totals_q, ["red", "yellow", "green"])
+    q4_use = cumulative_use_decimal(totals_q, ["red", "yellow", "green", "cyan"])
+    q5_use = cumulative_use_decimal(totals_q, ["red", "yellow", "green", "cyan", "blue"])
 
     total_usage = [
         fmt_pct(red_use),
@@ -461,6 +573,7 @@ def main(argv: Optional[Iterable[str]] = None) -> int:
                 valid_px = int(meta["valid_px"])
                 coverage_valid = None if valid_px <= 0 else (100.0 * classified_total / valid_px)
 
+                c_q = _counts_for_q(c)
                 w.writerow(
                     [
                         _display_filename(name),
@@ -471,11 +584,11 @@ def main(argv: Optional[Iterable[str]] = None) -> int:
                         valid_px,
                         coverage_valid,
                         *(dark_usage_percent(c, base) for base in BASE_COLORS),
-                        cumulative_use_decimal(c, ["red"]),
-                        cumulative_use_decimal(c, ["red", "yellow"]),
-                        cumulative_use_decimal(c, ["red", "yellow", "green"]),
-                        cumulative_use_decimal(c, ["red", "yellow", "green", "blue"]),
-                        cumulative_use_decimal(c, ["red", "yellow", "green", "blue", "cyan"]),
+                        cumulative_use_decimal(c_q, ["red"]),
+                        cumulative_use_decimal(c_q, ["red", "yellow"]),
+                        cumulative_use_decimal(c_q, ["red", "yellow", "green"]),
+                        cumulative_use_decimal(c_q, ["red", "yellow", "green", "cyan"]),
+                        cumulative_use_decimal(c_q, ["red", "yellow", "green", "cyan", "blue"]),
                     ]
                 )
 
