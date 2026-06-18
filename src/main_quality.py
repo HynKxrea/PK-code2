@@ -4,6 +4,7 @@ Usage: python3 src/main_quality.py
 import os
 import json
 import time
+import csv
 
 from data.preprocessing import (
     leathers,
@@ -85,6 +86,31 @@ def main():
 
     scores = calculate_leather_score(leathers)
 
+    # Optional: map hide_code (e.g., L0696156) -> 3-digit prefix (e.g., 001)
+    # for display/final output only (solver internals remain unchanged).
+    def _load_leather_prefix_map(manifest_path: str = os.path.join("dataset", "leather_manifest.csv")) -> dict:
+        m: dict[str, str] = {}
+        try:
+            with open(manifest_path, "r", encoding="utf-8") as f:
+                reader = csv.DictReader(f)
+                for row in reader:
+                    hide_code = (row.get("hide_code") or "").strip().upper()
+                    clean_folder = (row.get("clean_folder") or "").strip()
+                    if not hide_code or not clean_folder:
+                        continue
+                    prefix = clean_folder.split("_", 1)[0]
+                    if len(prefix) == 3 and prefix.isdigit():
+                        m[hide_code] = prefix
+        except Exception:
+            # If manifest is missing, just display original leather codes.
+            return {}
+        return m
+
+    leather_prefix = _load_leather_prefix_map()
+
+    def _disp_leather(leather_code: str) -> str:
+        return leather_prefix.get(str(leather_code).strip().upper(), str(leather_code))
+
     print('\n' + '=' * 70)
     print('SELECTION RESULT')
     print('=' * 70)
@@ -108,7 +134,8 @@ def main():
         utilization = (used_area / total_capacity * 100) if total_capacity > 0 else 0
 
         print('\n' + '-' * 70)
-        print(f"{idx}. Leather: {leather} | Score: {scores[leather]:,.2f} | Capacity(mm2): {total_capacity:,.2f} | Used(mm2): {used_area:,.2f} | Utilization: {utilization:.2f}%")
+        leather_label = _disp_leather(leather)
+        print(f"{idx}. Leather: {leather_label} | Score: {scores[leather]:,.2f} | Capacity(mm2): {total_capacity:,.2f} | Used(mm2): {used_area:,.2f} | Utilization: {utilization:.2f}%")
         print('Assigned Pieces:')
 
         if leather_rows.empty:
@@ -136,15 +163,27 @@ def main():
                 req_q = assign_grade(piece)
             except Exception:
                 req_q = None
+
         new_row = dict(row)
         new_row['RequiredQuality'] = req_q
+
+        # Display-only leather prefix (keep original code too)
+        lcode = str(new_row.get('Leather') or '').strip().upper()
+        new_row['LeatherCode'] = lcode
+        new_row['Leather'] = _disp_leather(lcode)
+
         enriched_assign.append(new_row)
 
+    selected_prefix = [_disp_leather(x) for x in selected]
+    scores_prefix = {_disp_leather(k): v for k, v in scores.items()}
+
     out = {
-        'selected': selected,
+        'selected': selected_prefix,
+        'selected_codes': selected,
         'assignment': enriched_assign,
         'objective_value': result.get('objective_value'),
-        'scores': scores
+        'scores': scores_prefix,
+        'scores_codes': scores,
     }
     os.makedirs('outputs', exist_ok=True)
     with open(os.path.join('outputs','selection.json'), 'w') as f:
