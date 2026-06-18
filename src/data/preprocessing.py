@@ -1,4 +1,5 @@
 import os
+import csv
 from .loader import (
     load_leathers,
     load_pieces,
@@ -128,6 +129,72 @@ total_pieces_required = sum(demand.values())  # already multiplied by production
 # Raw file-based counts (before material filtering)
 raw_pattern_types = _raw_pattern_types
 raw_pieces_per_bag = _raw_pieces_per_bag
+
+
+def _load_piece_required_quality_map(csv_path: str) -> dict[str, int]:
+    """Load required quality grade (Q1..Q5 -> 1..5) from piece_catalog_area_rule.csv.
+
+    The catalog 'name' column may include pattern prefixes; we normalize to the
+    suffix after '__' to match `load_pieces()` normalization.
+    """
+
+    mapping: dict[str, int] = {}
+
+    try:
+        with open(csv_path, "r", encoding="utf-8") as f:
+            reader = csv.DictReader(f)
+            for row in reader:
+                raw_name = (row.get("name") or "").strip()
+                if not raw_name:
+                    continue
+
+                if "__" in raw_name:
+                    piece_name = raw_name.split("__", 1)[1].strip().upper()
+                else:
+                    piece_name = raw_name.strip().upper()
+
+                q = (row.get("required_quality_area_rule") or "").strip().upper()
+                if not q.startswith("Q"):
+                    continue
+
+                try:
+                    grade = int(q[1:])
+                except Exception:
+                    continue
+
+                if 1 <= grade <= 5:
+                    mapping[piece_name] = grade
+
+    except Exception:
+        return {}
+
+    return mapping
+
+
+# Piece required quality mapping (used by visualization, etc.)
+PIECE_CATALOG_PATH = os.path.join(PIECES_DIR, "piece_catalog_area_rule.csv")
+REQUIRED_QUALITY_MAP: dict[str, int] = _load_piece_required_quality_map(PIECE_CATALOG_PATH)
+
+
+def get_required_quality(piece_name: str) -> int | None:
+    """Return required quality grade for a piece (1..5) if known."""
+
+    if not piece_name:
+        return None
+    return REQUIRED_QUALITY_MAP.get(str(piece_name).strip().upper())
+
+
+def required_grade_for_piece(piece_name: str) -> int:
+    """Return required grade for piece.
+
+    Priority:
+    1) dataset/pieces/piece_catalog_area_rule.csv (REQUIRED_QUALITY_MAP)
+    2) name-based heuristic (assign_grade)
+    """
+
+    rq = get_required_quality(piece_name)
+    return int(rq) if rq is not None else int(assign_grade(piece_name))
+
 
 def assign_grade(name):
 

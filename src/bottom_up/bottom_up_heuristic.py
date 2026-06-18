@@ -240,7 +240,14 @@ def _get_leather_allowed_integrals(
     where a pixel is 1 iff:
       - inside leather (alpha>=alpha_min)
       - not near-black outline
-      - quality_level <= grade
+      - quality_level is within the allowed window for that grade
+
+    Allowed window policy:
+      - grade=1 -> Q1 only
+      - grade=g (g>=2) -> Q(g-1) and Qg only
+
+    Example:
+      required_grade=4 -> allowed quality levels {3,4} (Q3 and Q4 only)
     """
 
     if not _HAS_NUMPY:
@@ -305,7 +312,8 @@ def _get_leather_allowed_integrals(
 
     allowed_integrals = []
     for grade in range(1, 6):
-        allowed = mask_c & (q_level <= grade)
+        low = 1 if grade <= 1 else (grade - 1)
+        allowed = mask_c & (q_level >= low) & (q_level <= grade)
         allowed_integrals.append(_integral_image(allowed))
 
     return (
@@ -469,7 +477,9 @@ def bottom_up_placements_for_pattern_on_leather(
     Constraints:
     - inside leather mask (alpha)
     - not near-black outline
-    - leather quality level <= required_grade
+    - leather quality constraint (windowed):
+        * required_grade=1 -> Q1 only
+        * required_grade=g (g>=2) -> Q(g-1) and Qg only
     - no rotation
     - bottom-up sequential placement (below->up, left->right)
     """
@@ -525,7 +535,10 @@ def max_pieces_for_pattern_on_leather(
     - Pattern is approximated as an axis-aligned rectangle (SIZE_X/SIZE_Y)
     - Leather is represented by its actual pixel mask from leather_preview.png
     - Quality constraint: every pixel under the rectangle must have leather quality
-      level <= required_grade (Q1 best=1 ... Q5 worst=5)
+      level within the allowed window for required_grade:
+        * required_grade=1 -> Q1 only
+        * required_grade=g (g>=2) -> Q(g-1) and Qg only
+      (Q1 best=1 ... Q5 worst=5)
     - Placement: bottom-up sequential rows, bottom-left preference, no rotation
 
     Returns:

@@ -16,6 +16,7 @@ Notes:
 from __future__ import annotations
 
 import argparse
+import csv
 from pathlib import Path
 
 from PIL import Image, ImageDraw, ImageFont
@@ -25,7 +26,7 @@ from bottom_up.bottom_up_heuristic import (
     get_leather_rect_mm,
     get_piece_rect_mm,
 )
-from data.preprocessing import assign_grade, demand, leathers, merge_data, pieces
+from data.preprocessing import demand, leathers, merge_data, pieces, required_grade_for_piece
 
 
 def _find_piece_key(data: dict, piece_query: str) -> str:
@@ -51,6 +52,39 @@ def _find_leather_preview_png(leather_code: str, dataset_leathers_dir: str = "da
     return None
 
 
+def _resolve_leather_code(leather_query: str) -> str:
+    """Resolve CLI leather identifier to a key in `leathers`.
+
+    Accepts either:
+    - hide_code key (e.g., L0696152) if present in `leathers`
+    - 3-digit prefix / clean_leather_no (e.g., 003) via dataset/leather_manifest.csv
+    """
+
+    q = str(leather_query).strip().upper()
+    if q in leathers:
+        return q
+
+    # Try mapping 3-digit prefix -> hide_code using leather_manifest.csv
+    if len(q) == 3 and q.isdigit():
+        manifest_path = Path("dataset") / "leather_manifest.csv"
+        if manifest_path.exists():
+            try:
+                with manifest_path.open("r", encoding="utf-8") as f:
+                    reader = csv.DictReader(f)
+                    for row in reader:
+                        clean_no = str(row.get("clean_leather_no") or "").strip()
+                        clean_folder = str(row.get("clean_folder") or "").strip()
+                        hide_code = str(row.get("hide_code") or "").strip().upper()
+
+                        if clean_no == str(int(q)) or clean_folder.startswith(f"{q}_"):
+                            if hide_code and hide_code in leathers:
+                                return hide_code
+            except Exception:
+                pass
+
+    return q
+
+
 def main() -> int:
     parser = argparse.ArgumentParser(description="Visualize bottom-up ub_ij placement")
     parser.add_argument("--piece", required=True, help="Piece name (exact or substring, case-insensitive)")
@@ -65,16 +99,17 @@ def main() -> int:
         "--required-grade",
         type=int,
         default=None,
-        help="Override required grade (1..5). Default: assign_grade(piece_name).",
+        help="Override required grade (1..5). Default: piece_catalog_area_rule.csv (fallback: name heuristic).",
     )
     args = parser.parse_args()
 
     data = merge_data(pieces, demand)
 
     piece_key = _find_piece_key(data, args.piece)
-    leather_code = args.leather.strip().upper()
+    leather_code = _resolve_leather_code(args.leather)
     if leather_code not in leathers:
-        raise KeyError(f"Leather not found: {leather_code}")
+        preview = ", ".join(list(leathers.keys())[:10])
+        raise KeyError(f"Leather not found: {leather_code} (examples: {preview} ...)")
 
     piece_rect = get_piece_rect_mm(data[piece_key].get("geom_attrs"))
     leather_rect = get_leather_rect_mm(leather_code)
@@ -86,7 +121,7 @@ def main() -> int:
     pw, ph = piece_rect
     lw, lh = leather_rect
 
-    required_grade = assign_grade(piece_key) if args.required_grade is None else int(args.required_grade)
+    required_grade = required_grade_for_piece(piece_key) if args.required_grade is None else int(args.required_grade)
     placements = bottom_up_placements_for_pattern_on_leather(
         piece_geom_attrs=data[piece_key].get("geom_attrs"),
         leather_code=leather_code,
