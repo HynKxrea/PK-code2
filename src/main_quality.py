@@ -20,7 +20,24 @@ import pandas as pd
 from selection.selection import solve_selection_mip
 
 
-def main():
+def main(argv=None):
+    import argparse
+
+    parser = argparse.ArgumentParser(description="Run quality-based selection MIP")
+    parser.add_argument(
+        "--ub-method",
+        default="bottom_left",
+        choices=["bottom_left", "history"],
+        help="Upper bound method for y[i,j] (default: bottom_left)",
+    )
+    parser.add_argument(
+        "--ub-history",
+        default=None,
+        help='History UB CSV path (used when --ub-method=history). Default: dataset/ub_history.csv',
+    )
+
+    args = parser.parse_args(list(argv) if argv is not None else None)
+
     t_start = time.perf_counter()
 
     # Data summary (inline, previously in utils.summary)
@@ -52,7 +69,12 @@ def main():
     # Solve selection MIP
     t0 = time.perf_counter()
     try:
-        result = solve_selection_mip(data, leathers)
+        result = solve_selection_mip(
+            data,
+            leathers,
+            ub_method=args.ub_method,
+            ub_history_path=args.ub_history,
+        )
     except Exception as e:
         print('\n❌ Solver error or ortools not available:', e)
         result = None

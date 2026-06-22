@@ -12,6 +12,7 @@ from data.preprocessing import (
 from selection.scorer_factory import create_scorer
 
 from bottom_up.bottom_up_heuristic import max_pieces_for_pattern_on_leather
+from selection.ub_history import load_history_ub
 
 
 # =====================================
@@ -61,7 +62,14 @@ def _load_piece_required_quality_map(csv_path: str) -> dict:
     return mapping
 
 
-def solve_selection_mip(data, leathers, leather_scores_override=None, score_direction_override=None):
+def solve_selection_mip(
+    data,
+    leathers,
+    leather_scores_override=None,
+    score_direction_override=None,
+    ub_method: str = "bottom_left",
+    ub_history_path: str | None = None,
+):
 
     # -----------------------------
     # Index
@@ -100,6 +108,21 @@ def solve_selection_mip(data, leathers, leather_scores_override=None, score_dire
             "Missing required quality entries in piece_catalog_area_rule.csv for these pieces: "
             f"{preview}{more}"
         )
+
+    # -----------------------------
+    # UB strategy (y[i,j] upper bounds)
+    # -----------------------------
+
+    ub_method = str(ub_method or "bottom_left").strip().lower()
+    if ub_method not in {"bottom_left", "history"}:
+        raise ValueError(f"Unknown ub_method: {ub_method} (expected: bottom_left|history)")
+
+    history_ub = None
+    if ub_method == "history":
+        if not ub_history_path:
+            # default path (can be overridden by caller)
+            ub_history_path = os.path.join("dataset", "ub_history.csv")
+        history_ub = load_history_ub(ub_history_path)
 
     # -----------------------------
     # Leather Scores (via scorer) or override
@@ -168,24 +191,35 @@ def solve_selection_mip(data, leathers, leather_scores_override=None, score_dire
             # y[i,j] is also bounded by demand via linking constraint; keep the tighter bound here.
             demand_i = float(data[i]["demand"])
 
-            # Upper bound by bottom-up heuristic (no rotation, bottom-left sequential placement)
-            # This is computed on-the-fly without preprocessing.
-            try:
-                ub_ij = int(
-                    max_pieces_for_pattern_on_leather(
-                        piece_geom_attrs=data[i].get("geom_attrs"),
-                        leather_code=j,
-                        required_grade=required_quality[i],
-                        dataset_leathers_dir=os.path.join('dataset', 'leathers'),
+            # Upper bound strategy for y[i,j]
+            if ub_method == "bottom_left":
+                # Upper bound by bottom-up heuristic (no rotation, bottom-left sequential placement)
+                # This is computed on-the-fly without preprocessing.
+                try:
+                    ub_ij = int(
+                        max_pieces_for_pattern_on_leather(
+                            piece_geom_attrs=data[i].get("geom_attrs"),
+                            leather_code=j,
+                            required_grade=required_quality[i],
+                            dataset_leathers_dir=os.path.join("dataset", "leathers"),
+                        )
                     )
-                )
-            except Exception:
-                # If we cannot compute, fall back to demand upper bound (do not over-restrict).
-                ub_ij = int(demand_i)
+                except Exception:
+                    # If we cannot compute, fall back to demand upper bound (do not over-restrict).
+                    ub_ij = int(demand_i)
 
-            # If heuristic returns 0 due to missing geometry, also fall back to demand.
-            if ub_ij <= 0:
-                ub_ij = int(demand_i)
+                # If heuristic returns 0 due to missing geometry, also fall back to demand.
+                if ub_ij <= 0:
+                    ub_ij = int(demand_i)
+
+            elif ub_method == "history":
+                # Upper bound from past observed usage (or any precomputed UB).
+                # If missing OR if the UB is 0, fall back to demand to avoid over-restricting.
+                assert history_ub is not None
+                ub_hist = history_ub.get(i, j)
+                ub_ij = int(demand_i) if ub_hist is None else int(ub_hist)
+                if ub_ij <= 0:
+                    ub_ij = int(demand_i)
 
             ub = min(demand_i, float(ub_ij))
 
