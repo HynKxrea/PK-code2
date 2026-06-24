@@ -13,6 +13,7 @@ from selection.scorer_factory import create_scorer
 
 from bottom_up.bottom_up_heuristic import max_pieces_for_pattern_on_leather
 from selection.ub_history import load_history_ub
+from selection.relaxation_debug import SelectionAudit
 
 
 # =====================================
@@ -69,6 +70,12 @@ def solve_selection_mip(
     score_direction_override=None,
     ub_method: str = "bottom_left",
     ub_history_path: str | None = None,
+    *,
+    # Debug/verification options
+    fix_x: dict | None = None,  # {leather_code: 0/1}
+    feasibility_only: bool = False,
+    debug_audit: bool = False,
+    debug_case_label: str | None = None,
 ):
 
     # -----------------------------
@@ -177,26 +184,37 @@ def solve_selection_mip(
     # -----------------------------
 
     # leather selection
-    x = {
-        j: solver.IntVar(0, 1, f"x[{j}]")
-        for j in J
-    }
+    x = {j: solver.IntVar(0, 1, f"x[{j}]") for j in J}
+
+    # Optional: fix x for feasibility checks (prove whether one case is a relaxation of another)
+    if fix_x is not None:
+        for j, v in fix_x.items():
+            if j in x:
+                x[j].SetBounds(int(v), int(v))
 
     # piece assignment (continuous)
     y = {}
 
+
+    # =============================
+    # DEBUG AUDIT: capture the *actual* ub/M values used by the model
+    # (This is the only reliable way to prove whether Case(2std) is truly a relaxation.)
+    # =============================
+    M_used = {}  # (i,j) -> min(demand_i, ub_used)
+    ub_used = {}  # (i,j) -> ub after fallback/default logic
+    ub_raw = {}  # (i,j) -> raw ub from source (before fallback). None if missing/exception
+    fallback_reason = {}  # (i,j) -> "missing" | "<=0" | "exception" | None
+    missing_ub = set()
+    nonpositive_ub = set()
+
     for i in I:
         for j in J:
-
-            # y[i,j] is also bounded by demand via linking constraint; keep the tighter bound here.
             demand_i = float(data[i]["demand"])
 
             # Upper bound strategy for y[i,j]
             if ub_method == "bottom_left":
-                # Upper bound by bottom-up heuristic (no rotation, bottom-left sequential placement)
-                # This is computed on-the-fly without preprocessing.
                 try:
-                    ub_ij = int(
+                    raw_val = float(
                         max_pieces_for_pattern_on_leather(
                             piece_geom_attrs=data[i].get("geom_attrs"),
                             leather_code=j,
@@ -204,30 +222,57 @@ def solve_selection_mip(
                             dataset_leathers_dir=os.path.join("dataset", "leathers"),
                         )
                     )
+                    ub_raw[(i, j)] = raw_val
+                    ub_ij = int(raw_val)
                 except Exception:
-                    # If we cannot compute, fall back to demand upper bound (do not over-restrict).
+                    # IMPORTANT: this fallback makes the implemented UB NON-MONOTONE
+                    # wrt the raw ub values (e.g., raw 0 -> demand, raw 1 -> 1).
+                    ub_raw[(i, j)] = None
+                    fallback_reason[(i, j)] = "exception"
                     ub_ij = int(demand_i)
 
-                # If heuristic returns 0 due to missing geometry, also fall back to demand.
                 if ub_ij <= 0:
+                    nonpositive_ub.add((i, j))
+                    fallback_reason[(i, j)] = "<=0"
                     ub_ij = int(demand_i)
 
             elif ub_method == "history":
-                # Upper bound from past observed usage (or any precomputed UB).
-                # If missing OR if the UB is 0, fall back to demand to avoid over-restricting.
                 assert history_ub is not None
                 ub_hist = history_ub.get(i, j)
-                ub_ij = int(demand_i) if ub_hist is None else int(ub_hist)
+                if ub_hist is None:
+                    missing_ub.add((i, j))
+                    ub_raw[(i, j)] = None
+                    fallback_reason[(i, j)] = "missing"
+                    ub_ij = int(demand_i)
+                else:
+                    ub_raw[(i, j)] = float(ub_hist)
+                    ub_ij = int(ub_hist)
+
+                # NOTE: This line is a common source of "relaxation" paradoxes.
+                # If std case has ub_hist = 0 (=> fallback to demand),
+                # but 2std case has ub_hist = 1 (=> no fallback), then ub_used DECREASES.
                 if ub_ij <= 0:
+                    nonpositive_ub.add((i, j))
+                    fallback_reason[(i, j)] = "<=0"
                     ub_ij = int(demand_i)
 
-            ub = min(demand_i, float(ub_ij))
+            ub_ij_used = float(ub_ij)
+            ub_used[(i, j)] = ub_ij_used
 
-            y[i, j] = solver.NumVar(
-                0,
-                ub,
-                f"y[{i},{j}]"
-            )
+            Mij = min(demand_i, ub_ij_used)
+            M_used[(i, j)] = Mij
+
+            y[i, j] = solver.NumVar(0, Mij, f"y[{i},{j}]")
+
+
+    if debug_audit:
+        all_ub = [var.ub() for var in y.values()]
+        print("\n[DEBUG] y upper bound summary (these are your M_ij values)")
+        print("min=", min(all_ub))
+        print("mean=", sum(all_ub) / len(all_ub))
+        print("max=", max(all_ub))
+        print("missing_ub count=", len(missing_ub))
+        print("nonpositive_ub (<=0 before fallback) count=", len(nonpositive_ub))
 
     # =====================================
     # Constraint 1
@@ -375,13 +420,17 @@ def solve_selection_mip(
 
     objective = solver.Objective()
 
-    for j in J:
-        objective.SetCoefficient(x[j], leather_scores[j])
+    if not feasibility_only:
+        for j in J:
+            objective.SetCoefficient(x[j], leather_scores[j])
 
-    # respect scoring direction: 'maximize' means higher score is better
-    if score_direction is not None and str(score_direction).lower() == 'maximize':
-        objective.SetMaximization()
+        # respect scoring direction: 'maximize' means higher score is better
+        if score_direction is not None and str(score_direction).lower() == 'maximize':
+            objective.SetMaximization()
+        else:
+            objective.SetMinimization()
     else:
+        # Feasibility-only mode: ignore the original objective direction.
         objective.SetMinimization()
 
     # =====================================
@@ -389,6 +438,14 @@ def solve_selection_mip(
     # =====================================
 
     status = solver.Solve()
+    print("Status name:", {
+        pywraplp.Solver.OPTIMAL: "OPTIMAL",
+        pywraplp.Solver.FEASIBLE: "FEASIBLE (중간 종료, 최적 보장 X)",
+        pywraplp.Solver.INFEASIBLE: "INFEASIBLE",
+        pywraplp.Solver.UNBOUNDED: "UNBOUNDED",
+        pywraplp.Solver.NOT_SOLVED: "NOT_SOLVED",
+        pywraplp.Solver.ABNORMAL: "ABNORMAL",
+    }.get(status, "UNKNOWN"))
 
     # =====================================
     # Result
@@ -422,12 +479,30 @@ def solve_selection_mip(
     assignment_df = pd.DataFrame(rows)
 
     result = {
-
         "selected_leathers": selected_leathers,
-
         "assignment_df": assignment_df,
-
-        "objective_value": objective.Value()
+        "objective_value": objective.Value(),
     }
+
+    if debug_audit:
+        case_label = debug_case_label or ub_method
+        audit = SelectionAudit(
+            case=case_label,
+            num_variables=solver.NumVariables(),
+            num_constraints=solver.NumConstraints(),
+            len_x=len(x),
+            len_y=len(y),
+            y_keys=set(y.keys()),
+            M_used=M_used,
+            ub_used=ub_used,
+            ub_raw=ub_raw,
+            fallback_reason=fallback_reason,
+            missing_ub=missing_ub,
+            nonpositive_ub=nonpositive_ub,
+            x_solution={j: int(round(x[j].solution_value())) for j in J},
+            objective_value=objective.Value(),
+            sum_x=sum(x[j].solution_value() for j in J),
+        )
+        result["audit"] = audit
 
     return result

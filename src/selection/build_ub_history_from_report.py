@@ -87,6 +87,12 @@ def main(argv: list[str] | None = None) -> int:
     ap.add_argument("--report", default="dataset/report.html", help="Path to report.html")
     ap.add_argument("--out", default="dataset/ub_history.csv", help="Output UB CSV path")
     ap.add_argument(
+        "--std-mult",
+        type=float,
+        default=1.0,
+        help="UB = mean + std_mult * std (default: 1.0)",
+    )
+    ap.add_argument(
         "--matrix-out",
         default="outputs/report_piece_counts_by_leather.csv",
         help="Optional matrix CSV (leather rows, piece columns)",
@@ -115,6 +121,12 @@ def main(argv: list[str] | None = None) -> int:
     piece_std: Dict[str, float] = {}
     piece_ub: Dict[str, int] = {}
 
+    # Always use CEIL for UB conversion (no selection mode).
+    # UB = ceil(mean + std_mult * std)
+    to_int = lambda x: int(math.ceil(x))
+
+    std_mult = float(args.std_mult)
+
     for p in piece_list:
         vals = [int(counts.get(lid, {}).get(p, 0)) for lid in leather_ids]
         mean = (sum(vals) / len(vals)) if vals else 0.0
@@ -124,8 +136,8 @@ def main(argv: list[str] | None = None) -> int:
         piece_mean[p] = float(mean)
         piece_std[p] = float(std)
 
-        # Use floor so we don't round back up.
-        ub = int(math.floor(mean + 0.7 * std))  # default to demand if not found
+        ub_float = mean + std_mult * std
+        ub = to_int(ub_float)
         piece_ub[p] = max(0, ub)
 
     # Write matrix CSV (report leather IDs)
@@ -143,9 +155,16 @@ def main(argv: list[str] | None = None) -> int:
     avg_out.parent.mkdir(parents=True, exist_ok=True)
     with avg_out.open("w", newline="", encoding="utf-8") as f:
         w = csv.writer(f)
-        w.writerow(["piece", "mean_count_per_leather", "std_count_per_leather", "ub"])
+        w.writerow(["piece", "mean_count_per_leather", "std_count_per_leather", "ub", "std_mult", "rounding"])
         for p in piece_list:
-            w.writerow([p, f"{piece_mean[p]:.6f}", f"{piece_std[p]:.6f}", piece_ub[p]])
+            w.writerow([
+                p,
+                f"{piece_mean[p]:.6f}",
+                f"{piece_std[p]:.6f}",
+                piece_ub[p],
+                f"{std_mult:.6f}",
+                "ceil",
+            ])
 
     # Write ub_history.csv for *current solver leathers*.
     # This makes history UB usable even if the report leather IDs do not match our dataset.

@@ -51,14 +51,14 @@ def main(argv=None):
     for q in ["Q1","Q2","Q3","Q4","Q5"]:
         leather_df[f"{q}_ratio"] = (leather_df[q] * 100 / leather_df['Total']).round(1)
 
-    print('\n' + '='*60)
-    print('LEATHER SUMMARY (top 10 by Total area)')
-    print('='*60)
-    try:
-        print(leather_df.sort_values('Total', ascending=False).head(10))
-    except Exception:
-        # fallback: just print counts
-        print('Total leathers:', len(leathers))
+    #print('\n' + '='*60)
+    #print('LEATHER SUMMARY (top 10 by Total area)')
+    #print('='*60)
+    #try:
+    #    print(leather_df.sort_values('Total', ascending=False).head(10))
+    #except Exception:
+    #    # fallback: just print counts
+    #    print('Total leathers:', len(leathers))
 
     # Build data
     t0 = time.perf_counter()
