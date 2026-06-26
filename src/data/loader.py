@@ -53,7 +53,7 @@ def load_leathers(folder_path):
             # fallback: derive from folder name e.g. 012_CY817_09_L0696168_Q1_71.45pct
             code = os.path.basename(os.path.dirname(file_path)).split("_")[-2] if "_" in os.path.basename(os.path.dirname(file_path)) else os.path.basename(os.path.dirname(file_path))
 
-        Q = [0.0] * 7
+        Q = [0.0] * 5
         quality_levels = root.find("QualityLevels")
         if quality_levels is None:
             continue
@@ -66,7 +66,7 @@ def load_leathers(folder_path):
                 q = int(name[1])
             except Exception:
                 continue
-            if 1 <= q <= 7:
+            if 1 <= q <= 5:
                 area_node = level.find("Area_mm2")
                 if area_node is not None and area_node.text is not None:
                     try:
