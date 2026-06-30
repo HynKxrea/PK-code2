@@ -1,0 +1,9 @@
+{
+  "method": "geometric",
+  "direction": "minimize",
+  "geometric": {
+    "weights": [10, 8, 6, 4],
+    "fragmentation_weight": 0.2,
+    "normalize": false
+  }
+}

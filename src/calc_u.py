@@ -22,7 +22,7 @@ from typing import Dict
 # 수정 가능한 상수
 # =============================================
 
-STD_MULT = 5.0  # u = ceil(mean + STD_MULT * std)
+STD_MULT = 6.0  # u = ceil(mean + STD_MULT * std)
 
 REPORT_PATH = Path("dataset/report.html")
 OUT_PATH     = Path("dataset/u_values.csv")

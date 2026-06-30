@@ -13,6 +13,13 @@ from mip.scorer_factory import create_scorer
 
 from mip.u_loader import load_history_u
 from mip.relaxation_debug import SelectionAudit
+from mip.defect_analyzer import load_all_effective_areas
+
+# =============================================
+# 파라미터 설정
+# =============================================
+USE_DEFECT_CORRECTION = False
+# =============================================
 
 
 # =====================================
@@ -122,6 +129,19 @@ def solve_selection_mip(
         u_history_path = os.path.join("dataset", "u_values.csv")
     history_u = load_history_u(u_history_path)
 
+    # =====================================
+    # 결함 팽창 기반 유효 면적 사전 계산 (가죽별 1회)
+    # =====================================
+
+    import time as _time
+    leathers_dir = os.path.join("dataset", "leathers")
+    _t0 = _time.perf_counter()
+    if USE_DEFECT_CORRECTION:
+        effective_areas = load_all_effective_areas(J, leathers_dir)
+    else:
+        effective_areas = {j: None for j in J}
+    print(f"[TIMER] defect_analyzer: {_time.perf_counter() - _t0:.3f}s")
+
     # -----------------------------
     # Leather Scores (via scorer) or override
     # -----------------------------
@@ -160,9 +180,8 @@ def solve_selection_mip(
         scorer, score_direction = create_scorer(scoring_config_path)
 
         for j in J:
-            # leathers[j] expected to be sequence where first 5 entries are Q1..Q5 areas
             grades = leathers[j][:5]
-            leather_scores[j] = scorer.score_leather(grades)
+            leather_scores[j] = scorer.score_leather(grades, geo_info=effective_areas.get(j))
 
     # -----------------------------
     # Solver
@@ -279,8 +298,20 @@ def solve_selection_mip(
     for j in J:
 
         grades = leathers[j][:5]
-
         Q1, Q2, Q3, Q4, Q5 = grades
+
+        eff = effective_areas[j]
+        if eff is not None:
+            eff_list     = eff["effective"]
+            Q1_eff       = eff_list[0]
+            Q1Q2_eff     = eff_list[1]
+            Q1Q2Q3_eff   = eff_list[2]
+            Q1Q2Q3Q4_eff = eff_list[3]
+        else:
+            Q1_eff       = Q1
+            Q1Q2_eff     = Q1 + Q2
+            Q1Q2Q3_eff   = Q1 + Q2 + Q3
+            Q1Q2Q3Q4_eff = Q1 + Q2 + Q3 + Q4
 
         # Q1
         solver.Add(
@@ -291,7 +322,7 @@ def solve_selection_mip(
                 if required_quality[i] <= 1
             )
 
-            <= Q1 * x[j] * c_list[0]
+            <= Q1_eff * x[j] * c_list[0]
         )
 
         # Q2
@@ -303,7 +334,7 @@ def solve_selection_mip(
                 if required_quality[i] <= 2
             )
 
-            <= (Q1 + Q2) * x[j] * c_list[1]
+            <= Q1Q2_eff * x[j] * c_list[1]
         )
 
         # Q3
@@ -315,7 +346,7 @@ def solve_selection_mip(
                 if required_quality[i] <= 3
             )
 
-            <= (Q1 + Q2 + Q3) * x[j] * c_list[2]
+            <= Q1Q2Q3_eff * x[j] * c_list[2]
         )
 
         # Q4
@@ -327,20 +358,9 @@ def solve_selection_mip(
                 if required_quality[i] <= 4
             )
 
-            <= (Q1 + Q2 + Q3 + Q4) * x[j] * c_list[3]
+            <= Q1Q2Q3Q4_eff * x[j] * c_list[3]
         )
 
-        # Q5
-        solver.Add(
-
-            solver.Sum(
-                data[i]["area"] * y[i, j]
-                for i in I
-                if required_quality[i] <= 5
-            )
-
-            <= (Q1 + Q2 + Q3 + Q4 + Q5) * x[j] * c_list[4]
-        )
 
     # =====================================
     # Constraint 2

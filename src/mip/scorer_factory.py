@@ -1,15 +1,16 @@
 import json
 import os
-from .scorer import WeightedSumScorer
+from .scorer import WeightedSumScorer, GeometricScorer
 
 
 def create_scorer(config_path=None):
     """
-    Load scoring configuration JSON and return (scorer, direction)
-    direction: 'maximize' or 'minimize' indicating whether higher scores are better.
+    Load scoring configuration JSON and return (scorer, direction).
+    direction: 'maximize' or 'minimize'
 
-    If config_path is None or file missing/invalid, returns a default WeightedSumScorer with weights [10,7,5,2,1]
-    and direction 'minimize' (to preserve previous behavior where lower objective was preferred).
+    method 옵션:
+      'weighted_sum'  — 기존 raw Q 면적 가중합
+      'geometric'     — Q_eff 기반 가중합 + 파편화 패널티 (Level1+2)
     """
 
     default_weights = [10, 8, 6, 4, 2]
@@ -32,6 +33,13 @@ def create_scorer(config_path=None):
         weights = wcfg.get('weights', default_weights)
         normalize = bool(wcfg.get('normalize', False))
         return WeightedSumScorer(weights, normalize=normalize), direction
+
+    if method == 'geometric':
+        gcfg = cfg.get('geometric', {})
+        weights = gcfg.get('weights', [10, 8, 6, 4])
+        frag_weight = float(gcfg.get('fragmentation_weight', 0.3))
+        normalize = bool(gcfg.get('normalize', False))
+        return GeometricScorer(weights, fragmentation_weight=frag_weight, normalize=normalize), direction
 
     # fallback
     return WeightedSumScorer(default_weights), default_direction

@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python3 -c ' *)",
+      "Bash(python3 src/schedule_main.py)",
+      "Bash(python3 src/main.py)",
+      "Bash(pip install *)",
+      "Bash(python3 -c \"import cv2; print\\(cv2.__version__\\)\")"
+    ]
+  }
+}
