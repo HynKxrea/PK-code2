@@ -18,7 +18,7 @@ from mip.defect_analyzer import load_all_effective_areas
 # =============================================
 # 파라미터 설정
 # =============================================
-USE_DEFECT_CORRECTION = False
+USE_DEFECT_CORRECTION = True
 # =============================================
 
 
@@ -136,7 +136,18 @@ def solve_selection_mip(
     import time as _time
     leathers_dir = os.path.join("dataset", "leathers")
     _t0 = _time.perf_counter()
-    if USE_DEFECT_CORRECTION:
+
+    # q_mode를 먼저 읽어서 effective_areas 계산 여부 결정
+    scoring_config_path = os.path.join('dataset', 'scoring_config.json')
+    _pre_q_mode = 'raw'
+    try:
+        import json as _json
+        with open(scoring_config_path, 'r', encoding='utf-8') as _fh:
+            _pre_q_mode = _json.load(_fh).get('q_mode', 'raw')
+    except Exception:
+        pass
+
+    if USE_DEFECT_CORRECTION or _pre_q_mode == 'effective':
         effective_areas = load_all_effective_areas(J, leathers_dir)
     else:
         effective_areas = {j: None for j in J}
@@ -176,12 +187,13 @@ def solve_selection_mip(
             leather_scores[j] = float(scaled)
 
     else:
-        scoring_config_path = os.path.join('dataset', 'scoring_config.json')
-        scorer, score_direction = create_scorer(scoring_config_path)
+        scorer, score_direction, q_mode = create_scorer(scoring_config_path)
+        print(f"[SCORER] method={scorer.__class__.__name__}  q_mode={q_mode}  direction={score_direction}")
 
         for j in J:
             grades = leathers[j][:5]
-            leather_scores[j] = scorer.score_leather(grades, geo_info=effective_areas.get(j))
+            geo = effective_areas.get(j) if q_mode == 'effective' else None
+            leather_scores[j] = scorer.score_leather(grades, geo_info=geo)
 
     # -----------------------------
     # Solver

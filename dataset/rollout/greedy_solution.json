@@ -1,0 +1,7363 @@
+{
+  "confirmed_boards": [
+    {
+      "board_id": "028_CZ402_15_L09169718_Q1_88.53pct",
+      "board_index": 29,
+      "usage": 0.7720923668956858,
+      "q1_usage": 0.7740651617925073,
+      "status": "confirmed",
+      "placements": [
+        {
+          "piece_id": "set01__U00484",
+          "angle": 90.0,
+          "anchor": [
+            995.1201477993833,
+            381.9420389144038
+          ],
+          "anchor_cell": [
+            45,
+            76
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set02__U00484",
+          "angle": 90.0,
+          "anchor": [
+            1215.1205202785143,
+            448.9733802409382
+          ],
+          "anchor_cell": [
+            52,
+            98
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set03__U00484",
+          "angle": 0.0,
+          "anchor": [
+            1935.5644573118143,
+            150.294521374892
+          ],
+          "anchor_cell": [
+            22,
+            170
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set04__U00484",
+          "angle": 0.0,
+          "anchor": [
+            2175.12,
+            359.27452137489246
+          ],
+          "anchor_cell": [
+            43,
+            194
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set05__U00484",
+          "angle": 0.0,
+          "anchor": [
+            2087.1602263989776,
+            577.1346390431426
+          ],
+          "anchor_cell": [
+            64,
+            185
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set06__U00484",
+          "angle": 90.0,
+          "anchor": [
+            2395.4400000000014,
+            1023.12
+          ],
+          "anchor_cell": [
+            109,
+            217
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set07__U00484",
+          "angle": 0.0,
+          "anchor": [
+            2569.1009479644395,
+            513.1192447864447
+          ],
+          "anchor_cell": [
+            58,
+            234
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set01__U00646",
+          "angle": 90.0,
+          "anchor": [
+            1419.5105202785128,
+            423.12
+          ],
+          "anchor_cell": [
+            49,
+            119
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set02__U00646",
+          "angle": 90.0,
+          "anchor": [
+            889.5101477993818,
+            353.12
+          ],
+          "anchor_cell": [
+            42,
+            64
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set03__U00646",
+          "angle": 0.0,
+          "anchor": [
+            1925.12,
+            682.7446390431431
+          ],
+          "anchor_cell": [
+            76,
+            169
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set04__U00646",
+          "angle": 0.0,
+          "anchor": [
+            2545.1165191132495,
+            282.0916375103261
+          ],
+          "anchor_cell": [
+            34,
+            231
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set05__U00646",
+          "angle": 90.0,
+          "anchor": [
+            1615.12,
+            611.7145213748921
+          ],
+          "anchor_cell": [
+            69,
+            138
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set01__U03332",
+          "angle": 90.0,
+          "anchor": [
+            1428.5144573118139,
+            93.12000000000003
+          ],
+          "anchor_cell": [
+            16,
+            119
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set02__U03332",
+          "angle": 0.0,
+          "anchor": [
+            1405.12,
+            798.99
+          ],
+          "anchor_cell": [
+            86,
+            117
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set03__U03332",
+          "angle": 90.0,
+          "anchor": [
+            2498.9300000000003,
+            863.12
+          ],
+          "anchor_cell": [
+            93,
+            227
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set04__U03332",
+          "angle": 90.0,
+          "anchor": [
+            675.5601477993818,
+            173.12
+          ],
+          "anchor_cell": [
+            24,
+            43
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set01__U06569",
+          "angle": 0.0,
+          "anchor": [
+            1935.5644573118143,
+            243.12
+          ],
+          "anchor_cell": [
+            31,
+            171
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set01__U04404",
+          "angle": 90.0,
+          "anchor": [
+            2577.8216293360683,
+            426.5554909466375
+          ],
+          "anchor_cell": [
+            49,
+            234
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set02__U04404",
+          "angle": 90.0,
+          "anchor": [
+            999.3399011606571,
+            396.3199549684142
+          ],
+          "anchor_cell": [
+            46,
+            77
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set01__U02689",
+          "angle": 270.0,
+          "anchor": [
+            1659.152797167314,
+            673.1203121360037
+          ],
+          "anchor_cell": [
+            74,
+            142
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set01__U05434",
+          "angle": 0.0,
+          "anchor": [
+            1810.3195361235285,
+            866.3142762093865
+          ],
+          "anchor_cell": [
+            93,
+            157
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set01__U05866",
+          "angle": 90.0,
+          "anchor": [
+            2498.93,
+            733.12
+          ],
+          "anchor_cell": [
+            80,
+            227
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set02__U05434",
+          "angle": 90.0,
+          "anchor": [
+            1419.6305202785131,
+            253.12
+          ],
+          "anchor_cell": [
+            32,
+            119
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set02__U05866",
+          "angle": 0.0,
+          "anchor": [
+            655.12,
+            173.12
+          ],
+          "anchor_cell": [
+            23,
+            42
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set03__U05434",
+          "angle": 90.0,
+          "anchor": [
+            1716.1200000000003,
+            263.12
+          ],
+          "anchor_cell": [
+            33,
+            148
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set03__U05866",
+          "angle": 0.0,
+          "anchor": [
+            655.12,
+            108.12
+          ],
+          "anchor_cell": [
+            17,
+            42
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set04__U05434",
+          "angle": 90.0,
+          "anchor": [
+            2095.12,
+            547.1199999999997
+          ],
+          "anchor_cell": [
+            61,
+            186
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set04__U05866",
+          "angle": 0.0,
+          "anchor": [
+            2431.3399999999997,
+            269.21000000000004
+          ],
+          "anchor_cell": [
+            34,
+            219
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set05__U05434",
+          "angle": 90.0,
+          "anchor": [
+            934.3399011606566,
+            393.12
+          ],
+          "anchor_cell": [
+            46,
+            69
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set05__U05866",
+          "angle": 90.0,
+          "anchor": [
+            2079.584457311814,
+            123.12
+          ],
+          "anchor_cell": [
+            19,
+            185
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set06__U05434",
+          "angle": 90.0,
+          "anchor": [
+            2224.9500000000003,
+            733.12
+          ],
+          "anchor_cell": [
+            80,
+            198
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set06__U05866",
+          "angle": 90.0,
+          "anchor": [
+            2144.584457311814,
+            123.01519685039369
+          ],
+          "anchor_cell": [
+            19,
+            192
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set07__U05434",
+          "angle": 90.0,
+          "anchor": [
+            2155.12,
+            726.0999999999997
+          ],
+          "anchor_cell": [
+            79,
+            192
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set07__U05866",
+          "angle": 90.0,
+          "anchor": [
+            2209.584457311814,
+            122.91039370078738
+          ],
+          "anchor_cell": [
+            19,
+            198
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set08__U05434",
+          "angle": 90.0,
+          "anchor": [
+            2090.12,
+            726.204803149606
+          ],
+          "anchor_cell": [
+            79,
+            185
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set08__U05866",
+          "angle": 90.0,
+          "anchor": [
+            2274.584457311814,
+            122.80559055118107
+          ],
+          "anchor_cell": [
+            19,
+            205
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set09__U05434",
+          "angle": 90.0,
+          "anchor": [
+            2025.12,
+            703.12
+          ],
+          "anchor_cell": [
+            77,
+            178
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set09__U05866",
+          "angle": 90.0,
+          "anchor": [
+            2339.584457311814,
+            122.70078740157476
+          ],
+          "anchor_cell": [
+            19,
+            211
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set10__U05434",
+          "angle": 90.0,
+          "anchor": [
+            1960.12,
+            703.2248031496064
+          ],
+          "anchor_cell": [
+            77,
+            172
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set10__U05866",
+          "angle": 90.0,
+          "anchor": [
+            1435.12,
+            376.01000000000033
+          ],
+          "anchor_cell": [
+            45,
+            120
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set11__U05434",
+          "angle": 90.0,
+          "anchor": [
+            1449.2200000000007,
+            513.12
+          ],
+          "anchor_cell": [
+            58,
+            121
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set11__U05866",
+          "angle": 90.0,
+          "anchor": [
+            1355.12,
+            423.1200000000009
+          ],
+          "anchor_cell": [
+            50,
+            112
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set12__U05434",
+          "angle": 90.0,
+          "anchor": [
+            610.5601477993824,
+            183.12
+          ],
+          "anchor_cell": [
+            25,
+            37
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set12__U05866",
+          "angle": 0.0,
+          "anchor": [
+            445.12,
+            92.98
+          ],
+          "anchor_cell": [
+            17,
+            21
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set13__U05434",
+          "angle": 90.0,
+          "anchor": [
+            545.5601477993824,
+            183.22480314960637
+          ],
+          "anchor_cell": [
+            25,
+            31
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set13__U05866",
+          "angle": 0.0,
+          "anchor": [
+            445.12,
+            157.98000000000002
+          ],
+          "anchor_cell": [
+            24,
+            21
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set14__U05434",
+          "angle": 90.0,
+          "anchor": [
+            480.56014779938243,
+            183.32960629921274
+          ],
+          "anchor_cell": [
+            23,
+            24
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set14__U05866",
+          "angle": 90.0,
+          "anchor": [
+            575.12,
+            60.22999999999968
+          ],
+          "anchor_cell": [
+            12,
+            34
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set15__U05434",
+          "angle": 90.0,
+          "anchor": [
+            380.12000000000046,
+            23.120000000000005
+          ],
+          "anchor_cell": [
+            9,
+            14
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set15__U05866",
+          "angle": 0.0,
+          "anchor": [
+            1225.12,
+            608.99
+          ],
+          "anchor_cell": [
+            67,
+            99
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set16__U05434",
+          "angle": 90.0,
+          "anchor": [
+            315.12000000000046,
+            23.224803149606366
+          ],
+          "anchor_cell": [
+            9,
+            8
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set16__U05866",
+          "angle": 0.0,
+          "anchor": [
+            322.2299999999997,
+            222.98000000000002
+          ],
+          "anchor_cell": [
+            29,
+            8
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set17__U05434",
+          "angle": 0.0,
+          "anchor": [
+            1014.75,
+            633.12
+          ],
+          "anchor_cell": [
+            70,
+            79
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set17__U05866",
+          "angle": 0.0,
+          "anchor": [
+            811.4499011606558,
+            463.12
+          ],
+          "anchor_cell": [
+            53,
+            57
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set18__U05434",
+          "angle": 90.0,
+          "anchor": [
+            1160.1200000000003,
+            493.12
+          ],
+          "anchor_cell": [
+            56,
+            92
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set18__U05866",
+          "angle": 0.0,
+          "anchor": [
+            847.4671893547095,
+            787.132973383455
+          ],
+          "anchor_cell": [
+            85,
+            62
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set19__U05434",
+          "angle": 90.0,
+          "anchor": [
+            996.0111016661,
+            645.3016626997619
+          ],
+          "anchor_cell": [
+            71,
+            76
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set01__U05956",
+          "angle": 0.0,
+          "anchor": [
+            1810.3195361235285,
+            793.12
+          ],
+          "anchor_cell": [
+            86,
+            157
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set02__U05956",
+          "angle": 0.0,
+          "anchor": [
+            2385.12,
+            77.98
+          ],
+          "anchor_cell": [
+            15,
+            215
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set03__U05956",
+          "angle": 0.0,
+          "anchor": [
+            2165.12,
+            89.02519685039391
+          ],
+          "anchor_cell": [
+            15,
+            193
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set01__U06051",
+          "angle": 0.0,
+          "anchor": [
+            1645.12,
+            648.6246390431432
+          ],
+          "anchor_cell": [
+            71,
+            141
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set01__U03721",
+          "angle": 90.0,
+          "anchor": [
+            665.12,
+            43.120000000000005
+          ],
+          "anchor_cell": [
+            10,
+            43
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set02__U03721",
+          "angle": 90.0,
+          "anchor": [
+            2564.6909479644405,
+            419.87924478644493
+          ],
+          "anchor_cell": [
+            48,
+            234
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set03__U03721",
+          "angle": 90.0,
+          "anchor": [
+            2160.1200000000003,
+            683.12
+          ],
+          "anchor_cell": [
+            75,
+            193
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set04__U03721",
+          "angle": 0.0,
+          "anchor": [
+            2675.12,
+            1051.28
+          ],
+          "anchor_cell": [
+            111,
+            244
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set01__U06697",
+          "angle": 135.0,
+          "anchor": [
+            2618.4288700924926,
+            643.5956233913596
+          ],
+          "anchor_cell": [
+            71,
+            238
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set01__U03476__q0",
+          "angle": 0.0,
+          "anchor": [
+            1075.12,
+            652.8200000000007
+          ],
+          "anchor_cell": [
+            73,
+            84
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set01__U03476__q1",
+          "angle": 0.0,
+          "anchor": [
+            2686.1171029438206,
+            1059.9371029592528
+          ],
+          "anchor_cell": [
+            112,
+            245
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set01__U03476__q2",
+          "angle": 0.0,
+          "anchor": [
+            276.08979632299,
+            -8.171753734545536
+          ],
+          "anchor_cell": [
+            6,
+            5
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set01__U03476__q3",
+          "angle": 0.0,
+          "anchor": [
+            621.3350000000004,
+            29.335000000000377
+          ],
+          "anchor_cell": [
+            9,
+            38
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set02__U03476__q0",
+          "angle": 0.0,
+          "anchor": [
+            1502.9154978271313,
+            64.20202493499515
+          ],
+          "anchor_cell": [
+            13,
+            126
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set02__U03476__q1",
+          "angle": 0.0,
+          "anchor": [
+            1464.1775694652,
+            58.5331586219245
+          ],
+          "anchor_cell": [
+            13,
+            122
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set02__U03476__q2",
+          "angle": 0.0,
+          "anchor": [
+            256.573964671695,
+            150.62842084920266
+          ],
+          "anchor_cell": [
+            22,
+            3
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set02__U03476__q3",
+          "angle": 0.0,
+          "anchor": [
+            1105.12,
+            548.4600000000002
+          ],
+          "anchor_cell": [
+            61,
+            87
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set03__U03476__q0",
+          "angle": 0.0,
+          "anchor": [
+            1098.5646922619658,
+            509.853019239971
+          ],
+          "anchor_cell": [
+            57,
+            87
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set03__U03476__q1",
+          "angle": 0.0,
+          "anchor": [
+            1347.9852630021892,
+            776.0941902845988
+          ],
+          "anchor_cell": [
+            85,
+            112
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set03__U03476__q2",
+          "angle": 0.0,
+          "anchor": [
+            2493.89510368139,
+            171.1239463729024
+          ],
+          "anchor_cell": [
+            24,
+            225
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set03__U03476__q3",
+          "angle": 0.0,
+          "anchor": [
+            2476.2443255200133,
+            120.93193124739264
+          ],
+          "anchor_cell": [
+            19,
+            223
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set04__U03476__q0",
+          "angle": 0.0,
+          "anchor": [
+            1384.9948327868851,
+            652.6007606557387
+          ],
+          "anchor_cell": [
+            72,
+            116
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set04__U03476__q1",
+          "angle": 0.0,
+          "anchor": [
+            1378.439525048851,
+            613.9937798957095
+          ],
+          "anchor_cell": [
+            67,
+            114
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set04__U03476__q2",
+          "angle": 0.0,
+          "anchor": [
+            2548.5187119256543,
+            1050.0283247289588
+          ],
+          "anchor_cell": [
+            111,
+            232
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set04__U03476__q3",
+          "angle": 0.0,
+          "anchor": [
+            2315.1212932692815,
+            1042.8126438260067
+          ],
+          "anchor_cell": [
+            112,
+            208
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set05__U03476__q0",
+          "angle": 0.0,
+          "anchor": [
+            2545.1165191132495,
+            293.12
+          ],
+          "anchor_cell": [
+            36,
+            232
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set05__U03476__q1",
+          "angle": 0.0,
+          "anchor": [
+            2583.8544474751807,
+            298.7888663130706
+          ],
+          "anchor_cell": [
+            39,
+            235
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set05__U03476__q2",
+          "angle": 0.0,
+          "anchor": [
+            664.9256532740774,
+            365.43186508719947
+          ],
+          "anchor_cell": [
+            42,
+            43
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set05__U03476__q3",
+          "angle": 0.0,
+          "anchor": [
+            703.6635816360088,
+            371.1007314002701
+          ],
+          "anchor_cell": [
+            44,
+            48
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set06__U03476__q0",
+          "angle": 0.0,
+          "anchor": [
+            742.4015099979401,
+            376.7695977133407
+          ],
+          "anchor_cell": [
+            45,
+            52
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set06__U03476__q1",
+          "angle": 0.0,
+          "anchor": [
+            626.187724912146,
+            359.76299877412885
+          ],
+          "anchor_cell": [
+            43,
+            38
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set06__U03476__q2",
+          "angle": 0.0,
+          "anchor": [
+            748.9568177359743,
+            415.3765784733699
+          ],
+          "anchor_cell": [
+            49,
+            51
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set06__U03476__q3",
+          "angle": 0.0,
+          "anchor": [
+            1705.12,
+            405.71000000000106
+          ],
+          "anchor_cell": [
+            48,
+            147
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set07__U03476__q0",
+          "angle": 0.0,
+          "anchor": [
+            1315.7600000000007,
+            473.12
+          ],
+          "anchor_cell": [
+            54,
+            107
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set07__U03476__q1",
+          "angle": 0.0,
+          "anchor": [
+            1277.1238461538467,
+            480.7192307692295
+          ],
+          "anchor_cell": [
+            55,
+            103
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set07__U03476__q2",
+          "angle": 0.0,
+          "anchor": [
+            856.4267280965236,
+            497.81047785735853
+          ],
+          "anchor_cell": [
+            56,
+            63
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set07__U03476__q3",
+          "angle": 0.0,
+          "anchor": [
+            2086.9370916923754,
+            494.4327660386571
+          ],
+          "anchor_cell": [
+            56,
+            186
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set08__U03476__q0",
+          "angle": 0.0,
+          "anchor": [
+            1232.5209834471173,
+            753.4969171598012
+          ],
+          "anchor_cell": [
+            83,
+            100
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set08__U03476__q1",
+          "angle": 0.0,
+          "anchor": [
+            1865.12,
+            886.0142762093873
+          ],
+          "anchor_cell": [
+            96,
+            163
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set08__U03476__q2",
+          "angle": 0.0,
+          "anchor": [
+            1273.3099357089445,
+            786.6270779965097
+          ],
+          "anchor_cell": [
+            86,
+            103
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set01__U03612__q0",
+          "angle": 270.0,
+          "anchor": [
+            302.8993399819784,
+            100.02872005608039
+          ],
+          "anchor_cell": [
+            16,
+            7
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set01__U03612__q1",
+          "angle": 180.0,
+          "anchor": [
+            1315.12,
+            509.57999999999925
+          ],
+          "anchor_cell": [
+            57,
+            108
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set02__U03612__q0",
+          "angle": 180.0,
+          "anchor": [
+            1777.5595361235287,
+            833.12
+          ],
+          "anchor_cell": [
+            90,
+            154
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set02__U03612__q1",
+          "angle": 0.0,
+          "anchor": [
+            2583.886519113249,
+            346.76000000000033
+          ],
+          "anchor_cell": [
+            42,
+            235
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set03__U03612__q0",
+          "angle": 180.0,
+          "anchor": [
+            2611.8744474751807,
+            316.5888663130699
+          ],
+          "anchor_cell": [
+            39,
+            238
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set03__U03612__q1",
+          "angle": 0.0,
+          "anchor": [
+            1735.3750804727056,
+            459.69463365222356
+          ],
+          "anchor_cell": [
+            53,
+            150
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set04__U03612__q0",
+          "angle": 90.0,
+          "anchor": [
+            2140.6938499149333,
+            503.12069935381624
+          ],
+          "anchor_cell": [
+            57,
+            190
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set04__U03612__q1",
+          "angle": 180.0,
+          "anchor": [
+            2245.12,
+            698.7099999999992
+          ],
+          "anchor_cell": [
+            76,
+            201
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set05__U03612__q0",
+          "angle": 180.0,
+          "anchor": [
+            1234.3735793646727,
+            787.4499886019232
+          ],
+          "anchor_cell": [
+            85,
+            100
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set05__U03612__q1",
+          "angle": 270.0,
+          "anchor": [
+            1453.8861161913335,
+            53.19152949615445
+          ],
+          "anchor_cell": [
+            12,
+            122
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set06__U03612__q0",
+          "angle": 0.0,
+          "anchor": [
+            2644.7400000000002,
+            933.12
+          ],
+          "anchor_cell": [
+            100,
+            242
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set06__U03612__q1",
+          "angle": 180.0,
+          "anchor": [
+            585.12,
+            25.819999999998913
+          ],
+          "anchor_cell": [
+            9,
+            35
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set07__U03612__q0",
+          "angle": 90.0,
+          "anchor": [
+            1355.12,
+            578.7700000000006
+          ],
+          "anchor_cell": [
+            65,
+            112
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set07__U03612__q1",
+          "angle": 0.0,
+          "anchor": [
+            1425.12,
+            580.420000000002
+          ],
+          "anchor_cell": [
+            65,
+            119
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set08__U03612__q0",
+          "angle": 270.0,
+          "anchor": [
+            985.12,
+            689.3729733834557
+          ],
+          "anchor_cell": [
+            75,
+            75
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set08__U03612__q1",
+          "angle": 180.0,
+          "anchor": [
+            2451.833771298085,
+            160.84084138415622
+          ],
+          "anchor_cell": [
+            23,
+            222
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set09__U03612__q0",
+          "angle": 0.0,
+          "anchor": [
+            2395.12070156042,
+            1057.5285634506356
+          ],
+          "anchor_cell": [
+            113,
+            216
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set09__U03612__q1",
+          "angle": 0.0,
+          "anchor": [
+            825.12,
+            398.12
+          ],
+          "anchor_cell": [
+            46,
+            59
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set10__U03612__q0",
+          "angle": 0.0,
+          "anchor": [
+            875.12,
+            398.12
+          ],
+          "anchor_cell": [
+            46,
+            64
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set10__U03612__q1",
+          "angle": 0.0,
+          "anchor": [
+            2122.4754915376293,
+            713.6633921498011
+          ],
+          "anchor_cell": [
+            78,
+            189
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set11__U03612__q0",
+          "angle": 0.0,
+          "anchor": [
+            2721.4063095246524,
+            431.11614057130373
+          ],
+          "anchor_cell": [
+            49,
+            248
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set11__U03612__q1",
+          "angle": 0.0,
+          "anchor": [
+            1131.3701477993818,
+            43.120000000000005
+          ],
+          "anchor_cell": [
+            11,
+            90
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set12__U03612__q0",
+          "angle": 180.0,
+          "anchor": [
+            885.12,
+            787.132973383455
+          ],
+          "anchor_cell": [
+            86,
+            65
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set12__U03612__q1",
+          "angle": 180.0,
+          "anchor": [
+            447.8001477993822,
+            233.12
+          ],
+          "anchor_cell": [
+            30,
+            21
+          ],
+          "via_lattice": false
+        }
+      ]
+    },
+    {
+      "board_id": "024_CZ402_16_L09169720_Q1_84.11pct",
+      "board_index": 28,
+      "usage": 0.7154643548543048,
+      "q1_usage": 0.7410981056199464,
+      "status": "confirmed",
+      "placements": [
+        {
+          "piece_id": "set08__U00484",
+          "angle": 0.0,
+          "anchor": [
+            1759.0,
+            193.48999999999978
+          ],
+          "anchor_cell": [
+            16,
+            141
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set09__U00484",
+          "angle": 0.0,
+          "anchor": [
+            1919.0,
+            402.47000000000025
+          ],
+          "anchor_cell": [
+            37,
+            157
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set10__U00484",
+          "angle": 90.0,
+          "anchor": [
+            1261.5100000000011,
+            559.12
+          ],
+          "anchor_cell": [
+            52,
+            91
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set11__U00484",
+          "angle": 90.0,
+          "anchor": [
+            1052.5300000000007,
+            555.7866485080973
+          ],
+          "anchor_cell": [
+            52,
+            70
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set12__U00484",
+          "angle": 90.0,
+          "anchor": [
+            838.9996312804191,
+            626.1813049396133
+          ],
+          "anchor_cell": [
+            59,
+            49
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set06__U00646",
+          "angle": 0.0,
+          "anchor": [
+            2059.0,
+            508.08000000000084
+          ],
+          "anchor_cell": [
+            48,
+            171
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set07__U00646",
+          "angle": 0.0,
+          "anchor": [
+            1988.9980141711444,
+            775.0973448552069
+          ],
+          "anchor_cell": [
+            73,
+            164
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set08__U00646",
+          "angle": 0.0,
+          "anchor": [
+            2639.0025512210455,
+            366.58997522157813
+          ],
+          "anchor_cell": [
+            32,
+            229
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set09__U00646",
+          "angle": 90.0,
+          "anchor": [
+            2591.348766970661,
+            839.1140659457134
+          ],
+          "anchor_cell": [
+            80,
+            223
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set10__U00646",
+          "angle": 0.0,
+          "anchor": [
+            2490.478765883939,
+            609.1153710920703
+          ],
+          "anchor_cell": [
+            57,
+            213
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set01__U00893__q0",
+          "angle": 180.0,
+          "anchor": [
+            2029.0,
+            506.3000000000011
+          ],
+          "anchor_cell": [
+            46,
+            168
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set01__U00893__q1",
+          "angle": 180.0,
+          "anchor": [
+            1619.0,
+            887.4500000000002
+          ],
+          "anchor_cell": [
+            84,
+            127
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set02__U00893__q0",
+          "angle": 0.0,
+          "anchor": [
+            969.0,
+            557.4466485080972
+          ],
+          "anchor_cell": [
+            53,
+            62
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set02__U00893__q1",
+          "angle": 90.0,
+          "anchor": [
+            718.4701964421048,
+            361.737302595418
+          ],
+          "anchor_cell": [
+            33,
+            37
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set05__U03332",
+          "angle": 0.0,
+          "anchor": [
+            1769.0,
+            200.05000000000018
+          ],
+          "anchor_cell": [
+            17,
+            142
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set06__U03332",
+          "angle": 90.0,
+          "anchor": [
+            609.0,
+            462.65730259541806
+          ],
+          "anchor_cell": [
+            43,
+            26
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set07__U03332",
+          "angle": 90.0,
+          "anchor": [
+            1611.604389378131,
+            619.6507302474353
+          ],
+          "anchor_cell": [
+            58,
+            127
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set08__U03332",
+          "angle": 0.0,
+          "anchor": [
+            1758.9971401850348,
+            722.028230849188
+          ],
+          "anchor_cell": [
+            69,
+            141
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set09__U03332",
+          "angle": 0.0,
+          "anchor": [
+            1919.0,
+            722.0300000000007
+          ],
+          "anchor_cell": [
+            69,
+            157
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set10__U03332",
+          "angle": 0.0,
+          "anchor": [
+            2109.0,
+            608.9953710920704
+          ],
+          "anchor_cell": [
+            56,
+            176
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set11__U03332",
+          "angle": 0.0,
+          "anchor": [
+            2109.0,
+            495.9453710920702
+          ],
+          "anchor_cell": [
+            45,
+            176
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set12__U03332",
+          "angle": 0.0,
+          "anchor": [
+            2459.0,
+            952.1640659457145
+          ],
+          "anchor_cell": [
+            92,
+            211
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set13__U03332",
+          "angle": 90.0,
+          "anchor": [
+            2179.0,
+            191.74
+          ],
+          "anchor_cell": [
+            16,
+            183
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set03__U04404",
+          "angle": 90.0,
+          "anchor": [
+            1432.0100000000011,
+            309.12
+          ],
+          "anchor_cell": [
+            27,
+            108
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set04__U04404",
+          "angle": 0.0,
+          "anchor": [
+            409.2308481952259,
+            545.9018560145089
+          ],
+          "anchor_cell": [
+            51,
+            6
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set19__U05866",
+          "angle": 90.0,
+          "anchor": [
+            2409.0,
+            486.1053710920701
+          ],
+          "anchor_cell": [
+            44,
+            206
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set20__U05434",
+          "angle": 0.0,
+          "anchor": [
+            1758.9976626417815,
+            279.11874500158615
+          ],
+          "anchor_cell": [
+            24,
+            142
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set20__U05866",
+          "angle": 0.0,
+          "anchor": [
+            1069.68551488515,
+            638.8625644817506
+          ],
+          "anchor_cell": [
+            60,
+            73
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set04__U05956",
+          "angle": 0.0,
+          "anchor": [
+            1359.0,
+            131.13000000000022
+          ],
+          "anchor_cell": [
+            9,
+            101
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set05__U05956",
+          "angle": 0.0,
+          "anchor": [
+            2479.0,
+            710.0153710920699
+          ],
+          "anchor_cell": [
+            68,
+            213
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set06__U05956",
+          "angle": 0.0,
+          "anchor": [
+            2478.85748502994,
+            744.0053710920697
+          ],
+          "anchor_cell": [
+            71,
+            213
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set07__U05956",
+          "angle": 90.0,
+          "anchor": [
+            2092.9900000000002,
+            599.12
+          ],
+          "anchor_cell": [
+            56,
+            175
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set08__U05956",
+          "angle": 0.0,
+          "anchor": [
+            1999.0,
+            722.0300000000007
+          ],
+          "anchor_cell": [
+            69,
+            165
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set09__U05956",
+          "angle": 0.0,
+          "anchor": [
+            1406.5955148851504,
+            569.12
+          ],
+          "anchor_cell": [
+            53,
+            106
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set10__U05956",
+          "angle": 0.0,
+          "anchor": [
+            1406.5955148851504,
+            609.12
+          ],
+          "anchor_cell": [
+            57,
+            106
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set11__U05956",
+          "angle": 0.0,
+          "anchor": [
+            1406.4529999150902,
+            643.1099999999998
+          ],
+          "anchor_cell": [
+            61,
+            106
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set12__U05956",
+          "angle": 0.0,
+          "anchor": [
+            1406.31048494503,
+            677.0999999999996
+          ],
+          "anchor_cell": [
+            65,
+            106
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set13__U05956",
+          "angle": 0.0,
+          "anchor": [
+            927.7910790760087,
+            640.3214584491518
+          ],
+          "anchor_cell": [
+            60,
+            58
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set14__U05956",
+          "angle": 0.0,
+          "anchor": [
+            1129.0,
+            127.79664850809752
+          ],
+          "anchor_cell": [
+            8,
+            78
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set15__U05956",
+          "angle": 0.0,
+          "anchor": [
+            1129.1425149700601,
+            93.80664850809774
+          ],
+          "anchor_cell": [
+            5,
+            78
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set16__U05956",
+          "angle": 0.0,
+          "anchor": [
+            1353.3353858492783,
+            722.0827432574164
+          ],
+          "anchor_cell": [
+            68,
+            100
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set17__U05956",
+          "angle": 90.0,
+          "anchor": [
+            2179.0000000000005,
+            369.12
+          ],
+          "anchor_cell": [
+            33,
+            182
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set18__U05956",
+          "angle": 0.0,
+          "anchor": [
+            2619.0,
+            952.1640659457145
+          ],
+          "anchor_cell": [
+            92,
+            227
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set19__U05956",
+          "angle": 0.0,
+          "anchor": [
+            2618.85748502994,
+            986.1540659457143
+          ],
+          "anchor_cell": [
+            96,
+            227
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set20__U05956",
+          "angle": 0.0,
+          "anchor": [
+            2618.71497005988,
+            1020.144065945714
+          ],
+          "anchor_cell": [
+            99,
+            227
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set01__U02457__q0",
+          "angle": 135.0,
+          "anchor": [
+            2088.9980480986205,
+            844.2796749593434
+          ],
+          "anchor_cell": [
+            81,
+            174
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set01__U02457__q1",
+          "angle": 135.0,
+          "anchor": [
+            2309.0,
+            912.2820199072071
+          ],
+          "anchor_cell": [
+            88,
+            196
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set02__U02457__q0",
+          "angle": 180.0,
+          "anchor": [
+            2372.4632480799123,
+            1101.3807841419186
+          ],
+          "anchor_cell": [
+            106,
+            203
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set02__U02457__q1",
+          "angle": 270.0,
+          "anchor": [
+            1505.0173596886523,
+            560.0792892257275
+          ],
+          "anchor_cell": [
+            52,
+            115
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set03__U02457__q0",
+          "angle": 90.0,
+          "anchor": [
+            1452.328455517454,
+            845.9896661979712
+          ],
+          "anchor_cell": [
+            81,
+            109
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set03__U02457__q1",
+          "angle": 270.0,
+          "anchor": [
+            1371.334847172557,
+            743.8841742932204
+          ],
+          "anchor_cell": [
+            71,
+            103
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set04__U02457__q0",
+          "angle": 315.0,
+          "anchor": [
+            2528.998518762459,
+            232.20270219632255
+          ],
+          "anchor_cell": [
+            19,
+            218
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set04__U02457__q1",
+          "angle": 90.0,
+          "anchor": [
+            2650.3400996158925,
+            1097.6856202150166
+          ],
+          "anchor_cell": [
+            106,
+            231
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set05__U02457__q0",
+          "angle": 270.0,
+          "anchor": [
+            2029.0,
+            722.0299999999997
+          ],
+          "anchor_cell": [
+            69,
+            168
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set05__U02457__q1",
+          "angle": 135.0,
+          "anchor": [
+            2081.460524331409,
+            949.0639440368336
+          ],
+          "anchor_cell": [
+            92,
+            173
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set01__U02211__q0",
+          "angle": 270.0,
+          "anchor": [
+            2069.0,
+            385.1000000000005
+          ],
+          "anchor_cell": [
+            34,
+            172
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set02__U06051",
+          "angle": 90.0,
+          "anchor": [
+            1399.0,
+            509.12
+          ],
+          "anchor_cell": [
+            47,
+            106
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set03__U06051",
+          "angle": 0.0,
+          "anchor": [
+            1689.0,
+            526.0792892257284
+          ],
+          "anchor_cell": [
+            48,
+            134
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set05__U03721",
+          "angle": 90.0,
+          "anchor": [
+            799.0,
+            123.98
+          ],
+          "anchor_cell": [
+            9,
+            45
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set06__U03721",
+          "angle": 90.0,
+          "anchor": [
+            2089.0,
+            136.0
+          ],
+          "anchor_cell": [
+            10,
+            174
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set07__U03721",
+          "angle": 90.0,
+          "anchor": [
+            1409.0,
+            517.0999999999996
+          ],
+          "anchor_cell": [
+            48,
+            106
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set08__U03721",
+          "angle": 0.0,
+          "anchor": [
+            2134.5487658839393,
+            729.12
+          ],
+          "anchor_cell": [
+            69,
+            178
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set09__U03721",
+          "angle": 0.0,
+          "anchor": [
+            2345.05,
+            339.12
+          ],
+          "anchor_cell": [
+            30,
+            200
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set10__U03721",
+          "angle": 90.0,
+          "anchor": [
+            2496.375729012529,
+            355.1246813129517
+          ],
+          "anchor_cell": [
+            32,
+            215
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set11__U03721",
+          "angle": 0.0,
+          "anchor": [
+            1115.9581081612716,
+            778.9017949587685
+          ],
+          "anchor_cell": [
+            74,
+            77
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set12__U03721",
+          "angle": 0.0,
+          "anchor": [
+            2394.555283902393,
+            1031.5671365974467
+          ],
+          "anchor_cell": [
+            99,
+            205
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set13__U03721",
+          "angle": 0.0,
+          "anchor": [
+            1311.4337688430955,
+            1015.7485187590995
+          ],
+          "anchor_cell": [
+            98,
+            97
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set02__U06697",
+          "angle": 0.0,
+          "anchor": [
+            2369.0,
+            122.83
+          ],
+          "anchor_cell": [
+            9,
+            202
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set08__U03476__q3",
+          "angle": 0.0,
+          "anchor": [
+            909.9565813551462,
+            956.0848800438505
+          ],
+          "anchor_cell": [
+            92,
+            57
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set09__U03476__q0",
+          "angle": 0.0,
+          "anchor": [
+            930.3625431248565,
+            922.6202018651262
+          ],
+          "anchor_cell": [
+            88,
+            60
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set09__U03476__q1",
+          "angle": 0.0,
+          "anchor": [
+            950.7685048945668,
+            889.1555236864019
+          ],
+          "anchor_cell": [
+            85,
+            62
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set09__U03476__q2",
+          "angle": 0.0,
+          "anchor": [
+            1738.9970054112628,
+            755.3522382601432
+          ],
+          "anchor_cell": [
+            71,
+            139
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set09__U03476__q3",
+          "angle": 0.0,
+          "anchor": [
+            1129.1425149700601,
+            99.12
+          ],
+          "anchor_cell": [
+            6,
+            79
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set10__U03476__q0",
+          "angle": 0.0,
+          "anchor": [
+            1167.8804433319915,
+            104.78886631307064
+          ],
+          "anchor_cell": [
+            6,
+            83
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set10__U03476__q1",
+          "angle": 0.0,
+          "anchor": [
+            569.6386752151544,
+            341.62528500819354
+          ],
+          "anchor_cell": [
+            30,
+            21
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set10__U03476__q2",
+          "angle": 0.0,
+          "anchor": [
+            629.4704146246377,
+            345.6374763636954
+          ],
+          "anchor_cell": [
+            30,
+            28
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set10__U03476__q3",
+          "angle": 0.0,
+          "anchor": [
+            666.8004146246376,
+            333.287476363695
+          ],
+          "anchor_cell": [
+            29,
+            33
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set11__U03476__q0",
+          "angle": 0.0,
+          "anchor": [
+            660.2451068866035,
+            294.68049560366586
+          ],
+          "anchor_cell": [
+            24,
+            33
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set11__U03476__q1",
+          "angle": 0.0,
+          "anchor": [
+            2037.7174372870863,
+            865.7498838649743
+          ],
+          "anchor_cell": [
+            83,
+            170
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set11__U03476__q2",
+          "angle": 0.0,
+          "anchor": [
+            1649.0,
+            579.7792892257291
+          ],
+          "anchor_cell": [
+            55,
+            130
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set11__U03476__q3",
+          "angle": 0.0,
+          "anchor": [
+            2079.302682831443,
+            200.56921001173322
+          ],
+          "anchor_cell": [
+            17,
+            173
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set12__U03476__q0",
+          "angle": 0.0,
+          "anchor": [
+            2085.857990569477,
+            239.17619077176235
+          ],
+          "anchor_cell": [
+            21,
+            174
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set12__U03476__q1",
+          "angle": 0.0,
+          "anchor": [
+            2092.413298307511,
+            277.7831715317915
+          ],
+          "anchor_cell": [
+            25,
+            175
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set12__U03476__q2",
+          "angle": 0.0,
+          "anchor": [
+            2312.4595532456033,
+            509.0236764845246
+          ],
+          "anchor_cell": [
+            46,
+            197
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set12__U03476__q3",
+          "angle": 0.0,
+          "anchor": [
+            2351.1974816075344,
+            514.6925427975953
+          ],
+          "anchor_cell": [
+            48,
+            201
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set13__U03476__q0",
+          "angle": 0.0,
+          "anchor": [
+            2304.2164220065906,
+            559.955750634431
+          ],
+          "anchor_cell": [
+            53,
+            195
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set13__U03476__q1",
+          "angle": 0.0,
+          "anchor": [
+            1465.6835227365889,
+            789.1705682097509
+          ],
+          "anchor_cell": [
+            76,
+            112
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set13__U03476__q2",
+          "angle": 0.0,
+          "anchor": [
+            1472.238830474623,
+            827.77754896978
+          ],
+          "anchor_cell": [
+            80,
+            112
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set13__U03476__q3",
+          "angle": 0.0,
+          "anchor": [
+            1478.7941382126571,
+            866.3845297298092
+          ],
+          "anchor_cell": [
+            84,
+            111
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set14__U03476__q0",
+          "angle": 0.0,
+          "anchor": [
+            1440.6645338656206,
+            876.1327413270956
+          ],
+          "anchor_cell": [
+            84,
+            108
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set14__U03476__q1",
+          "angle": 0.0,
+          "anchor": [
+            1401.9266055036892,
+            870.4638750140249
+          ],
+          "anchor_cell": [
+            85,
+            104
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set14__U03476__q2",
+          "angle": 0.0,
+          "anchor": [
+            1100.5100000000002,
+            816.3100000000009
+          ],
+          "anchor_cell": [
+            77,
+            75
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set14__U03476__q3",
+          "angle": 0.0,
+          "anchor": [
+            2581.970087093484,
+            1121.4036022817345
+          ],
+          "anchor_cell": [
+            108,
+            224
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set15__U03476__q0",
+          "angle": 0.0,
+          "anchor": [
+            2620.708015455415,
+            1127.072468594805
+          ],
+          "anchor_cell": [
+            109,
+            228
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set15__U03476__q1",
+          "angle": 0.0,
+          "anchor": [
+            2659.4459438173462,
+            1132.7413349078756
+          ],
+          "anchor_cell": [
+            109,
+            232
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set15__U03476__q2",
+          "angle": 0.0,
+          "anchor": [
+            2698.1838721792774,
+            1138.4102012209462
+          ],
+          "anchor_cell": [
+            111,
+            236
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set15__U03476__q3",
+          "angle": 0.0,
+          "anchor": [
+            1969.6231270302533,
+            102.71146080093064
+          ],
+          "anchor_cell": [
+            7,
+            162
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set16__U03476__q0",
+          "angle": 0.0,
+          "anchor": [
+            1976.1784347682874,
+            141.31844156095977
+          ],
+          "anchor_cell": [
+            11,
+            161
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set16__U03476__q1",
+          "angle": 0.0,
+          "anchor": [
+            1937.440506406356,
+            135.64957524788912
+          ],
+          "anchor_cell": [
+            10,
+            158
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set16__U03476__q2",
+          "angle": 0.0,
+          "anchor": [
+            869.0,
+            143.68000000000075
+          ],
+          "anchor_cell": [
+            11,
+            52
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set16__U03476__q3",
+          "angle": 0.0,
+          "anchor": [
+            875.5553077380341,
+            182.28698076002988
+          ],
+          "anchor_cell": [
+            15,
+            53
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set17__U03476__q0",
+          "angle": 0.0,
+          "anchor": [
+            838.5705308593829,
+            195.5940149465474
+          ],
+          "anchor_cell": [
+            16,
+            48
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set17__U03476__q1",
+          "angle": 0.0,
+          "anchor": [
+            1881.8876626417818,
+            269.12
+          ],
+          "anchor_cell": [
+            23,
+            154
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set17__U03476__q2",
+          "angle": 0.0,
+          "anchor": [
+            2359.0,
+            905.907136597447
+          ],
+          "anchor_cell": [
+            86,
+            201
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set17__U03476__q3",
+          "angle": 0.0,
+          "anchor": [
+            2397.737928361931,
+            911.5760029105177
+          ],
+          "anchor_cell": [
+            87,
+            206
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set18__U03476__q0",
+          "angle": 0.0,
+          "anchor": [
+            1923.77,
+            919.3000000000008
+          ],
+          "anchor_cell": [
+            87,
+            158
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set18__U03476__q1",
+          "angle": 0.0,
+          "anchor": [
+            2355.8483659404237,
+            267.75273677190097
+          ],
+          "anchor_cell": [
+            22,
+            201
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set18__U03476__q2",
+          "angle": 0.0,
+          "anchor": [
+            2394.586294302355,
+            273.4216030849716
+          ],
+          "anchor_cell": [
+            23,
+            206
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set18__U03476__q3",
+          "angle": 0.0,
+          "anchor": [
+            1439.0,
+            536.8000000000003
+          ],
+          "anchor_cell": [
+            51,
+            109
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set19__U03476__q0",
+          "angle": 0.0,
+          "anchor": [
+            1445.5553077380341,
+            575.4069807600295
+          ],
+          "anchor_cell": [
+            55,
+            110
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set19__U03476__q1",
+          "angle": 0.0,
+          "anchor": [
+            1424.249345968324,
+            608.2716589387538
+          ],
+          "anchor_cell": [
+            58,
+            107
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set19__U03476__q2",
+          "angle": 0.0,
+          "anchor": [
+            1139.0,
+            658.5625644817513
+          ],
+          "anchor_cell": [
+            63,
+            79
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set19__U03476__q3",
+          "angle": 0.0,
+          "anchor": [
+            2298.820752241417,
+            807.9828602667818
+          ],
+          "anchor_cell": [
+            77,
+            194
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set20__U03476__q0",
+          "angle": 0.0,
+          "anchor": [
+            2277.5147904717064,
+            840.8475384455062
+          ],
+          "anchor_cell": [
+            80,
+            191
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set20__U03476__q1",
+          "angle": 0.0,
+          "anchor": [
+            2249.1367712893493,
+            879.5186370731749
+          ],
+          "anchor_cell": [
+            84,
+            189
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set20__U03476__q2",
+          "angle": 0.0,
+          "anchor": [
+            2626.386512463666,
+            858.2607242138641
+          ],
+          "anchor_cell": [
+            83,
+            227
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set20__U03476__q3",
+          "angle": 0.0,
+          "anchor": [
+            2048.045970074814,
+            993.0914014962581
+          ],
+          "anchor_cell": [
+            95,
+            169
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set13__U03612__q0",
+          "angle": 0.0,
+          "anchor": [
+            1914.6476626417816,
+            239.12
+          ],
+          "anchor_cell": [
+            20,
+            157
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set13__U03612__q1",
+          "angle": 0.0,
+          "anchor": [
+            1251.0113022639084,
+            110.7445139410298
+          ],
+          "anchor_cell": [
+            8,
+            90
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set14__U03612__q0",
+          "angle": 0.0,
+          "anchor": [
+            2238.752409199001,
+            116.52534946299738
+          ],
+          "anchor_cell": [
+            8,
+            189
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set14__U03612__q1",
+          "angle": 180.0,
+          "anchor": [
+            2251.579609944609,
+            84.90655580066014
+          ],
+          "anchor_cell": [
+            6,
+            192
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set15__U03612__q0",
+          "angle": 270.0,
+          "anchor": [
+            2305.4994719756105,
+            566.7254576931991
+          ],
+          "anchor_cell": [
+            53,
+            195
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set15__U03612__q1",
+          "angle": 90.0,
+          "anchor": [
+            1614.9505956920223,
+            598.2785016193113
+          ],
+          "anchor_cell": [
+            56,
+            126
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set16__U03612__q0",
+          "angle": 0.0,
+          "anchor": [
+            928.8247818515375,
+            760.4273972155873
+          ],
+          "anchor_cell": [
+            72,
+            59
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set16__U03612__q1",
+          "angle": 180.0,
+          "anchor": [
+            912.2466554472746,
+            693.0949219755364
+          ],
+          "anchor_cell": [
+            65,
+            56
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set17__U03612__q0",
+          "angle": 90.0,
+          "anchor": [
+            2079.0,
+            761.8799999999993
+          ],
+          "anchor_cell": [
+            73,
+            173
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set17__U03612__q1",
+          "angle": 90.0,
+          "anchor": [
+            2110.6000000000004,
+            339.12
+          ],
+          "anchor_cell": [
+            30,
+            176
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set18__U03612__q0",
+          "angle": 180.0,
+          "anchor": [
+            1397.4772833796685,
+            535.1583590116609
+          ],
+          "anchor_cell": [
+            49,
+            105
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set18__U03612__q1",
+          "angle": 0.0,
+          "anchor": [
+            2329.061790658413,
+            118.29023972988236
+          ],
+          "anchor_cell": [
+            8,
+            198
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set19__U03612__q0",
+          "angle": 90.0,
+          "anchor": [
+            1052.906092494426,
+            838.6800566230538
+          ],
+          "anchor_cell": [
+            80,
+            71
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set19__U03612__q1",
+          "angle": 180.0,
+          "anchor": [
+            2409.200715654222,
+            1121.2689207455555
+          ],
+          "anchor_cell": [
+            108,
+            206
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set20__U03612__q0",
+          "angle": 0.0,
+          "anchor": [
+            1344.1937688430953,
+            999.12
+          ],
+          "anchor_cell": [
+            96,
+            100
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set20__U03612__q1",
+          "angle": 90.0,
+          "anchor": [
+            2032.2686451980119,
+            378.78298890973923
+          ],
+          "anchor_cell": [
+            34,
+            168
+          ],
+          "via_lattice": false
+        }
+      ]
+    },
+    {
+      "board_id": "020_CZ402_02_L09169692_Q1_79.83pct",
+      "board_index": 27,
+      "usage": 0.6456890422565883,
+      "q1_usage": 0.6876379008110652,
+      "status": "confirmed",
+      "placements": [
+        {
+          "piece_id": "set13__U00484",
+          "angle": 90.0,
+          "anchor": [
+            1877.9997114516684,
+            474.8202697978101
+          ],
+          "anchor_cell": [
+            43,
+            170
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set14__U00484",
+          "angle": 90.0,
+          "anchor": [
+            1877.9997114516684,
+            868.8202697978102
+          ],
+          "anchor_cell": [
+            83,
+            170
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set15__U00484",
+          "angle": 0.0,
+          "anchor": [
+            978.9191629214586,
+            476.21760686077323
+          ],
+          "anchor_cell": [
+            42,
+            81
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set11__U00646",
+          "angle": 0.0,
+          "anchor": [
+            2348.0057594480963,
+            78.10358400475769
+          ],
+          "anchor_cell": [
+            4,
+            217
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set12__U00646",
+          "angle": 90.0,
+          "anchor": [
+            1758.0,
+            839.9899999999991
+          ],
+          "anchor_cell": [
+            78,
+            158
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set13__U00646",
+          "angle": 90.0,
+          "anchor": [
+            1656.9805528725913,
+            840.135026184745
+          ],
+          "anchor_cell": [
+            79,
+            147
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set14__U00646",
+          "angle": 0.0,
+          "anchor": [
+            2457.9967572385417,
+            179.07860013598116
+          ],
+          "anchor_cell": [
+            14,
+            228
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set15__U00646",
+          "angle": 90.0,
+          "anchor": [
+            1079.8132192118044,
+            577.118972800403
+          ],
+          "anchor_cell": [
+            53,
+            91
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set16__U00646",
+          "angle": 0.0,
+          "anchor": [
+            1435.8458750828859,
+            387.12584052134406
+          ],
+          "anchor_cell": [
+            34,
+            127
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set17__U00646",
+          "angle": 90.0,
+          "anchor": [
+            2608.0,
+            1053.989999999999
+          ],
+          "anchor_cell": [
+            100,
+            243
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set18__U00646",
+          "angle": 90.0,
+          "anchor": [
+            2633.8104952474228,
+            631.3380593557964
+          ],
+          "anchor_cell": [
+            58,
+            245
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set03__U00893__q0",
+          "angle": 90.0,
+          "anchor": [
+            1770.8497114516674,
+            97.12
+          ],
+          "anchor_cell": [
+            5,
+            158
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set03__U00893__q1",
+          "angle": 90.0,
+          "anchor": [
+            583.2652077076867,
+            327.1206606283197
+          ],
+          "anchor_cell": [
+            28,
+            40
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set14__U03332",
+          "angle": 90.0,
+          "anchor": [
+            865.8632192118043,
+            217.12
+          ],
+          "anchor_cell": [
+            17,
+            68
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set15__U03332",
+          "angle": 90.0,
+          "anchor": [
+            1981.489711451667,
+            287.12
+          ],
+          "anchor_cell": [
+            24,
+            181
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set16__U03332",
+          "angle": 90.0,
+          "anchor": [
+            2094.5397114516672,
+            287.12
+          ],
+          "anchor_cell": [
+            24,
+            193
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set17__U03332",
+          "angle": 90.0,
+          "anchor": [
+            1981.489711451667,
+            447.12
+          ],
+          "anchor_cell": [
+            40,
+            181
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set18__U03332",
+          "angle": 90.0,
+          "anchor": [
+            2094.5397114516672,
+            447.12
+          ],
+          "anchor_cell": [
+            40,
+            193
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set19__U03332",
+          "angle": 90.0,
+          "anchor": [
+            2207.5897114516674,
+            447.12
+          ],
+          "anchor_cell": [
+            40,
+            204
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set20__U03332",
+          "angle": 0.0,
+          "anchor": [
+            1288.0,
+            387.00584052134417
+          ],
+          "anchor_cell": [
+            33,
+            111
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set02__U06569",
+          "angle": 0.0,
+          "anchor": [
+            1088.0,
+            600.995840521344
+          ],
+          "anchor_cell": [
+            56,
+            91
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set03__U06569",
+          "angle": 0.0,
+          "anchor": [
+            1618.0,
+            484.0599999999997
+          ],
+          "anchor_cell": [
+            43,
+            144
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set04__U06569",
+          "angle": 0.0,
+          "anchor": [
+            1618.0,
+            371.08999999999946
+          ],
+          "anchor_cell": [
+            31,
+            144
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set05__U06569",
+          "angle": 90.0,
+          "anchor": [
+            1498.0,
+            340.1850261847452
+          ],
+          "anchor_cell": [
+            29,
+            132
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set06__U06569",
+          "angle": 0.0,
+          "anchor": [
+            1473.98,
+            327.12
+          ],
+          "anchor_cell": [
+            28,
+            129
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set07__U06569",
+          "angle": 0.0,
+          "anchor": [
+            2298.0,
+            392.94860013598105
+          ],
+          "anchor_cell": [
+            35,
+            212
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set08__U06569",
+          "angle": 0.0,
+          "anchor": [
+            618.1132835049343,
+            184.9177013669462
+          ],
+          "anchor_cell": [
+            14,
+            44
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set09__U06569",
+          "angle": 0.0,
+          "anchor": [
+            2378.0,
+            639.7700000000002
+          ],
+          "anchor_cell": [
+            60,
+            220
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set10__U06569",
+          "angle": 0.0,
+          "anchor": [
+            2358.0,
+            752.7400000000005
+          ],
+          "anchor_cell": [
+            71,
+            218
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set05__U04404",
+          "angle": 90.0,
+          "anchor": [
+            2621.8737210879094,
+            783.1191998266277
+          ],
+          "anchor_cell": [
+            74,
+            244
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set06__U04404",
+          "angle": 0.0,
+          "anchor": [
+            2121.05,
+            697.12
+          ],
+          "anchor_cell": [
+            65,
+            195
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set06__U02457__q0",
+          "angle": 45.0,
+          "anchor": [
+            2115.776360266805,
+            777.12
+          ],
+          "anchor_cell": [
+            73,
+            194
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set06__U02457__q1",
+          "angle": 90.0,
+          "anchor": [
+            2475.2430330813613,
+            426.6804835347096
+          ],
+          "anchor_cell": [
+            38,
+            230
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set07__U02457__q0",
+          "angle": 90.0,
+          "anchor": [
+            1319.708792196324,
+            985.8474570301316
+          ],
+          "anchor_cell": [
+            94,
+            115
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set07__U02457__q1",
+          "angle": 270.0,
+          "anchor": [
+            1372.872439327721,
+            697.6342581945496
+          ],
+          "anchor_cell": [
+            65,
+            121
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set08__U02457__q0",
+          "angle": 135.0,
+          "anchor": [
+            2336.885692396896,
+            897.1164167705473
+          ],
+          "anchor_cell": [
+            85,
+            215
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set08__U02457__q1",
+          "angle": 45.0,
+          "anchor": [
+            1366.3066488151376,
+            667.12
+          ],
+          "anchor_cell": [
+            62,
+            119
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set09__U02457__q0",
+          "angle": 225.0,
+          "anchor": [
+            1153.7133511848615,
+            207.12
+          ],
+          "anchor_cell": [
+            16,
+            97
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set09__U02457__q1",
+          "angle": 315.0,
+          "anchor": [
+            768.0,
+            238.44095804563585
+          ],
+          "anchor_cell": [
+            19,
+            59
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set10__U02457__q0",
+          "angle": 135.0,
+          "anchor": [
+            1385.8878999155133,
+            627.1404173423178
+          ],
+          "anchor_cell": [
+            58,
+            120
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set10__U02457__q1",
+          "angle": 315.0,
+          "anchor": [
+            1248.505517840767,
+            621.8994414036358
+          ],
+          "anchor_cell": [
+            57,
+            107
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set11__U02457__q0",
+          "angle": 0.0,
+          "anchor": [
+            1467.4284528972346,
+            240.70515909916375
+          ],
+          "anchor_cell": [
+            19,
+            129
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set11__U02457__q1",
+          "angle": 180.0,
+          "anchor": [
+            1185.6745776944945,
+            186.5856190743417
+          ],
+          "anchor_cell": [
+            13,
+            101
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set12__U02457__q0",
+          "angle": 0.0,
+          "anchor": [
+            1464.9909996876893,
+            147.26123231692287
+          ],
+          "anchor_cell": [
+            10,
+            128
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set12__U02457__q1",
+          "angle": 270.0,
+          "anchor": [
+            2324.457427262476,
+            608.111092475412
+          ],
+          "anchor_cell": [
+            56,
+            214
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set13__U02457__q0",
+          "angle": 90.0,
+          "anchor": [
+            2271.7685230912775,
+            894.0214694476556
+          ],
+          "anchor_cell": [
+            87,
+            207
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set13__U02457__q1",
+          "angle": 0.0,
+          "anchor": [
+            1106.522062681525,
+            186.887682623832
+          ],
+          "anchor_cell": [
+            13,
+            93
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set14__U02457__q0",
+          "angle": 180.0,
+          "anchor": [
+            826.9522481426285,
+            135.59941285801347
+          ],
+          "anchor_cell": [
+            8,
+            67
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set14__U02457__q1",
+          "angle": 135.0,
+          "anchor": [
+            908.0,
+            711.4056216155415
+          ],
+          "anchor_cell": [
+            67,
+            73
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set15__U02457__q0",
+          "angle": 135.0,
+          "anchor": [
+            958.0,
+            735.2824893364816
+          ],
+          "anchor_cell": [
+            69,
+            78
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set15__U02457__q1",
+          "angle": 90.0,
+          "anchor": [
+            1441.744961512439,
+            777.8497121902283
+          ],
+          "anchor_cell": [
+            74,
+            127
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set16__U02457__q0",
+          "angle": 90.0,
+          "anchor": [
+            1477.4141283708645,
+            795.5182634027123
+          ],
+          "anchor_cell": [
+            75,
+            131
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set16__U02457__q1",
+          "angle": 315.0,
+          "anchor": [
+            578.401835763338,
+            202.71949400651368
+          ],
+          "anchor_cell": [
+            15,
+            40
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set17__U02457__q0",
+          "angle": 225.0,
+          "anchor": [
+            2372.8423761973822,
+            887.1082940140274
+          ],
+          "anchor_cell": [
+            84,
+            219
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set17__U02457__q1",
+          "angle": 135.0,
+          "anchor": [
+            758.0,
+            715.9942556759115
+          ],
+          "anchor_cell": [
+            67,
+            58
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set18__U02457__q0",
+          "angle": 90.0,
+          "anchor": [
+            2218.0,
+            908.6300000000002
+          ],
+          "anchor_cell": [
+            87,
+            204
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set18__U02457__q1",
+          "angle": 0.0,
+          "anchor": [
+            2514.9456724973056,
+            454.34857508970555
+          ],
+          "anchor_cell": [
+            40,
+            234
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set19__U02457__q0",
+          "angle": 135.0,
+          "anchor": [
+            598.0,
+            319.20435018208383
+          ],
+          "anchor_cell": [
+            28,
+            42
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set19__U02457__q1",
+          "angle": 90.0,
+          "anchor": [
+            818.0,
+            372.72760686077345
+          ],
+          "anchor_cell": [
+            32,
+            64
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set20__U02457__q0",
+          "angle": 225.0,
+          "anchor": [
+            2333.677563584002,
+            988.3744711918938
+          ],
+          "anchor_cell": [
+            94,
+            215
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set04__U06051",
+          "angle": 90.0,
+          "anchor": [
+            1544.8418467526787,
+            826.1955197534475
+          ],
+          "anchor_cell": [
+            78,
+            137
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set05__U06051",
+          "angle": 90.0,
+          "anchor": [
+            2667.9304952474226,
+            497.12
+          ],
+          "anchor_cell": [
+            45,
+            250
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set06__U06051",
+          "angle": 90.0,
+          "anchor": [
+            1153.7133511848615,
+            377.12
+          ],
+          "anchor_cell": [
+            33,
+            97
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set07__U06051",
+          "angle": 90.0,
+          "anchor": [
+            2164.115520392607,
+            914.2496464016353
+          ],
+          "anchor_cell": [
+            86,
+            199
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set14__U03721",
+          "angle": 90.0,
+          "anchor": [
+            2618.0,
+            991.0991998266272
+          ],
+          "anchor_cell": [
+            95,
+            244
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set15__U03721",
+          "angle": 0.0,
+          "anchor": [
+            2260.5897114516674,
+            397.12
+          ],
+          "anchor_cell": [
+            35,
+            209
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set16__U03721",
+          "angle": 90.0,
+          "anchor": [
+            468.1029806249927,
+            480.9558740183468
+          ],
+          "anchor_cell": [
+            44,
+            29
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set17__U03721",
+          "angle": 0.0,
+          "anchor": [
+            2034.4897114516673,
+            857.12
+          ],
+          "anchor_cell": [
+            81,
+            186
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set18__U03721",
+          "angle": 90.0,
+          "anchor": [
+            1308.0,
+            541.0258405213438
+          ],
+          "anchor_cell": [
+            50,
+            113
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set19__U03721",
+          "angle": 90.0,
+          "anchor": [
+            1047.9946548203368,
+            158.98784366056242
+          ],
+          "anchor_cell": [
+            12,
+            87
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set20__U03721",
+          "angle": 90.0,
+          "anchor": [
+            1248.0,
+            774.3374570301314
+          ],
+          "anchor_cell": [
+            72,
+            107
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set03__U06697",
+          "angle": 0.0,
+          "anchor": [
+            2232.78510060901,
+            915.6434191063938
+          ],
+          "anchor_cell": [
+            86,
+            206
+          ],
+          "via_lattice": false
+        }
+      ]
+    },
+    {
+      "board_id": "008_CY817_12_L0696174_Q1_67.04pct",
+      "board_index": 26,
+      "usage": 0.6211406005525919,
+      "q1_usage": 0.6950816699758305,
+      "status": "confirmed",
+      "placements": [
+        {
+          "piece_id": "set16__U00484",
+          "angle": 90.0,
+          "anchor": [
+            1605.124032820892,
+            376.98350468781393
+          ],
+          "anchor_cell": [
+            52,
+            131
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set17__U00484",
+          "angle": 90.0,
+          "anchor": [
+            1814.1040328208924,
+            527.12
+          ],
+          "anchor_cell": [
+            66,
+            153
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set18__U00484",
+          "angle": 90.0,
+          "anchor": [
+            2023.0840328208928,
+            530.4533514919025
+          ],
+          "anchor_cell": [
+            66,
+            174
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set19__U00484",
+          "angle": 0.0,
+          "anchor": [
+            2155.12,
+            633.9433514919023
+          ],
+          "anchor_cell": [
+            77,
+            186
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set20__U00484",
+          "angle": 90.0,
+          "anchor": [
+            2260.6100000000015,
+            727.12
+          ],
+          "anchor_cell": [
+            86,
+            198
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set01__U00978",
+          "angle": 0.0,
+          "anchor": [
+            1715.12,
+            125.99000000000022
+          ],
+          "anchor_cell": [
+            26,
+            142
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set19__U00646",
+          "angle": 0.0,
+          "anchor": [
+            2495.12,
+            126.11000000000011
+          ],
+          "anchor_cell": [
+            27,
+            220
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set20__U00646",
+          "angle": 90.0,
+          "anchor": [
+            2465.0,
+            707.12
+          ],
+          "anchor_cell": [
+            84,
+            218
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set04__U00893__q0",
+          "angle": 0.0,
+          "anchor": [
+            1595.12,
+            378.6435046878138
+          ],
+          "anchor_cell": [
+            52,
+            130
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set04__U00893__q1",
+          "angle": 180.0,
+          "anchor": [
+            1507.1119303536232,
+            476.2594246548102
+          ],
+          "anchor_cell": [
+            61,
+            120
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set05__U00893__q0",
+          "angle": 0.0,
+          "anchor": [
+            2525.12,
+            127.65000000000008
+          ],
+          "anchor_cell": [
+            27,
+            223
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set05__U00893__q1",
+          "angle": 180.0,
+          "anchor": [
+            2707.797633404078,
+            431.72402635759494
+          ],
+          "anchor_cell": [
+            58,
+            243
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set06__U00893__q0",
+          "angle": 0.0,
+          "anchor": [
+            2705.12,
+            127.65000000000008
+          ],
+          "anchor_cell": [
+            27,
+            241
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set06__U00893__q1",
+          "angle": 90.0,
+          "anchor": [
+            1408.7936227155897,
+            297.38674877666955
+          ],
+          "anchor_cell": [
+            43,
+            111
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set07__U00893__q0",
+          "angle": 270.0,
+          "anchor": [
+            1055.8837841724255,
+            476.5403882933966
+          ],
+          "anchor_cell": [
+            62,
+            76
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set07__U00893__q1",
+          "angle": 90.0,
+          "anchor": [
+            1305.4993337484173,
+            202.40593332033583
+          ],
+          "anchor_cell": [
+            33,
+            101
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set08__U00893__q0",
+          "angle": 90.0,
+          "anchor": [
+            1834.678112485153,
+            843.280141935601
+          ],
+          "anchor_cell": [
+            97,
+            154
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set08__U00893__q1",
+          "angle": 180.0,
+          "anchor": [
+            1015.6459410670637,
+            496.35870809179386
+          ],
+          "anchor_cell": [
+            63,
+            71
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set09__U00893__q0",
+          "angle": 0.0,
+          "anchor": [
+            833.0900702048198,
+            190.59807907925688
+          ],
+          "anchor_cell": [
+            32,
+            52
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set11__U06569",
+          "angle": 0.0,
+          "anchor": [
+            1947.25,
+            857.12
+          ],
+          "anchor_cell": [
+            99,
+            165
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set12__U06569",
+          "angle": 90.0,
+          "anchor": [
+            2465.0994225105555,
+            447.11518511532506
+          ],
+          "anchor_cell": [
+            58,
+            218
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set13__U06569",
+          "angle": 90.0,
+          "anchor": [
+            2578.069422510556,
+            447.01223713844644
+          ],
+          "anchor_cell": [
+            58,
+            229
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set14__U06569",
+          "angle": 90.0,
+          "anchor": [
+            1648.1576758177375,
+            697.1196188612524
+          ],
+          "anchor_cell": [
+            83,
+            135
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set15__U06569",
+          "angle": 90.0,
+          "anchor": [
+            2717.216055474452,
+            788.4888525547445
+          ],
+          "anchor_cell": [
+            92,
+            242
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set07__U04404",
+          "angle": 0.0,
+          "anchor": [
+            2135.12,
+            333.12
+          ],
+          "anchor_cell": [
+            46,
+            184
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set02__U02689",
+          "angle": 0.0,
+          "anchor": [
+            2355.12,
+            47.95000000000026
+          ],
+          "anchor_cell": [
+            17,
+            206
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set03__U02689",
+          "angle": 0.0,
+          "anchor": [
+            1955.12,
+            47.95000000000026
+          ],
+          "anchor_cell": [
+            17,
+            166
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set20__U02457__q1",
+          "angle": 270.0,
+          "anchor": [
+            818.7967926968569,
+            -93.69789311855872
+          ],
+          "anchor_cell": [
+            4,
+            53
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set01__U02211__q1",
+          "angle": 45.0,
+          "anchor": [
+            1465.5563433533061,
+            723.1530661240445
+          ],
+          "anchor_cell": [
+            85,
+            117
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set02__U02211__q0",
+          "angle": 315.0,
+          "anchor": [
+            1461.3499204298116,
+            556.8612493112217
+          ],
+          "anchor_cell": [
+            69,
+            116
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set02__U02211__q1",
+          "angle": 0.0,
+          "anchor": [
+            2576.688143578722,
+            1116.9439583019878
+          ],
+          "anchor_cell": [
+            124,
+            228
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set03__U02211__q0",
+          "angle": 180.0,
+          "anchor": [
+            2862.503999345001,
+            1064.3180025389538
+          ],
+          "anchor_cell": [
+            118,
+            255
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set03__U02211__q1",
+          "angle": 0.0,
+          "anchor": [
+            2567.384423655102,
+            1050.639348085998
+          ],
+          "anchor_cell": [
+            116,
+            228
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set04__U02211__q0",
+          "angle": 180.0,
+          "anchor": [
+            2853.2002794213813,
+            998.0133923229641
+          ],
+          "anchor_cell": [
+            112,
+            254
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set04__U02211__q1",
+          "angle": 225.0,
+          "anchor": [
+            2275.12,
+            873.6987871036057
+          ],
+          "anchor_cell": [
+            101,
+            198
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set05__U02211__q0",
+          "angle": 45.0,
+          "anchor": [
+            1123.1583056017969,
+            658.3616393857893
+          ],
+          "anchor_cell": [
+            79,
+            82
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set05__U02211__q1",
+          "angle": 90.0,
+          "anchor": [
+            1463.05078184111,
+            814.7701387137452
+          ],
+          "anchor_cell": [
+            95,
+            116
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set06__U02211__q0",
+          "angle": 225.0,
+          "anchor": [
+            1102.0458382020292,
+            28.659892646477942
+          ],
+          "anchor_cell": [
+            17,
+            81
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set06__U02211__q1",
+          "angle": 180.0,
+          "anchor": [
+            1383.4998505675017,
+            66.78456396509503
+          ],
+          "anchor_cell": [
+            21,
+            109
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set07__U02211__q0",
+          "angle": 0.0,
+          "anchor": [
+            1096.0809987528355,
+            119.8508274059916
+          ],
+          "anchor_cell": [
+            27,
+            80
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set07__U02211__q1",
+          "angle": 180.0,
+          "anchor": [
+            1393.0604945573386,
+            132.983084135213
+          ],
+          "anchor_cell": [
+            28,
+            110
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set08__U02211__q0",
+          "angle": 180.0,
+          "anchor": [
+            1383.899808415348,
+            489.4758586020377
+          ],
+          "anchor_cell": [
+            63,
+            109
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set08__U02211__q1",
+          "angle": 0.0,
+          "anchor": [
+            1096.4809566006816,
+            542.5421220429342
+          ],
+          "anchor_cell": [
+            69,
+            80
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set09__U02211__q0",
+          "angle": 180.0,
+          "anchor": [
+            1393.984835167969,
+            559.8784312439406
+          ],
+          "anchor_cell": [
+            70,
+            110
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set09__U02211__q1",
+          "angle": 180.0,
+          "anchor": [
+            1407.5647127742243,
+            614.6374917807401
+          ],
+          "anchor_cell": [
+            74,
+            111
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set10__U02211__q0",
+          "angle": 180.0,
+          "anchor": [
+            2524.133598072207,
+            260.8274359778711
+          ],
+          "anchor_cell": [
+            40,
+            223
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set10__U02211__q1",
+          "angle": 225.0,
+          "anchor": [
+            2355.1207203987547,
+            861.3784219259788
+          ],
+          "anchor_cell": [
+            100,
+            206
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set11__U02211__q0",
+          "angle": 180.0,
+          "anchor": [
+            2724.6664229333014,
+            624.2264911262333
+          ],
+          "anchor_cell": [
+            76,
+            243
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set11__U02211__q1",
+          "angle": 45.0,
+          "anchor": [
+            895.7058675566856,
+            85.22045044260113
+          ],
+          "anchor_cell": [
+            21,
+            60
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set12__U02211__q0",
+          "angle": 90.0,
+          "anchor": [
+            1603.8662902538817,
+            585.4666505330221
+          ],
+          "anchor_cell": [
+            72,
+            130
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set12__U02211__q1",
+          "angle": 135.0,
+          "anchor": [
+            2922.1600700437466,
+            246.90631090490183
+          ],
+          "anchor_cell": [
+            38,
+            263
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set13__U02211__q0",
+          "angle": 45.0,
+          "anchor": [
+            2455.6232723496564,
+            911.72528670645
+          ],
+          "anchor_cell": [
+            104,
+            216
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set13__U02211__q1",
+          "angle": 225.0,
+          "anchor": [
+            2783.983269094534,
+            771.8463139959589
+          ],
+          "anchor_cell": [
+            91,
+            249
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set14__U02211__q0",
+          "angle": 135.0,
+          "anchor": [
+            1594.4548384958025,
+            552.9312506890069
+          ],
+          "anchor_cell": [
+            68,
+            130
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set14__U02211__q1",
+          "angle": 225.0,
+          "anchor": [
+            1025.7716966854778,
+            45.70551850371914
+          ],
+          "anchor_cell": [
+            18,
+            74
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set15__U02211__q0",
+          "angle": 225.0,
+          "anchor": [
+            1015.8956984911381,
+            105.25650474568633
+          ],
+          "anchor_cell": [
+            24,
+            73
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set15__U02211__q1",
+          "angle": 45.0,
+          "anchor": [
+            2220.732676545967,
+            876.5691009363564
+          ],
+          "anchor_cell": [
+            100,
+            193
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set16__U02211__q0",
+          "angle": 0.0,
+          "anchor": [
+            2283.854114100044,
+            869.9466465669265
+          ],
+          "anchor_cell": [
+            101,
+            199
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set16__U02211__q1",
+          "angle": 225.0,
+          "anchor": [
+            2623.234362069305,
+            1000.7013496948849
+          ],
+          "anchor_cell": [
+            114,
+            233
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set17__U02211__q0",
+          "angle": 180.0,
+          "anchor": [
+            2977.9500092558337,
+            416.45245279525926
+          ],
+          "anchor_cell": [
+            56,
+            269
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set17__U02211__q1",
+          "angle": 135.0,
+          "anchor": [
+            913.0209778923667,
+            63.54401117077913
+          ],
+          "anchor_cell": [
+            19,
+            61
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set08__U06051",
+          "angle": 0.0,
+          "anchor": [
+            2425.12,
+            13.950000000000259
+          ],
+          "anchor_cell": [
+            14,
+            213
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set09__U06051",
+          "angle": 90.0,
+          "anchor": [
+            2717.216055474452,
+            937.12
+          ],
+          "anchor_cell": [
+            107,
+            241
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set10__U06051",
+          "angle": 90.0,
+          "anchor": [
+            2683.216055474452,
+            937.0636102236422
+          ],
+          "anchor_cell": [
+            107,
+            238
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set11__U06051",
+          "angle": 90.0,
+          "anchor": [
+            2499.12,
+            797.12
+          ],
+          "anchor_cell": [
+            93,
+            221
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set12__U06051",
+          "angle": 0.0,
+          "anchor": [
+            545.082342527313,
+            161.0018578094808
+          ],
+          "anchor_cell": [
+            29,
+            25
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set13__U06051",
+          "angle": 0.0,
+          "anchor": [
+            545.2212243164504,
+            127.00185780948081
+          ],
+          "anchor_cell": [
+            25,
+            26
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set14__U06051",
+          "angle": 0.0,
+          "anchor": [
+            545.3601061055878,
+            93.00185780948081
+          ],
+          "anchor_cell": [
+            22,
+            27
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set15__U06051",
+          "angle": 0.0,
+          "anchor": [
+            575.12,
+            59.00185780948081
+          ],
+          "anchor_cell": [
+            19,
+            28
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set16__U06051",
+          "angle": 90.0,
+          "anchor": [
+            609.12,
+            267.12
+          ],
+          "anchor_cell": [
+            40,
+            32
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set17__U06051",
+          "angle": 90.0,
+          "anchor": [
+            643.12,
+            266.9811182108626
+          ],
+          "anchor_cell": [
+            40,
+            35
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set18__U06051",
+          "angle": 90.0,
+          "anchor": [
+            677.12,
+            266.84223642172515
+          ],
+          "anchor_cell": [
+            40,
+            39
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set19__U06051",
+          "angle": 90.0,
+          "anchor": [
+            711.12,
+            266.7033546325877
+          ],
+          "anchor_cell": [
+            40,
+            42
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set20__U06051",
+          "angle": 90.0,
+          "anchor": [
+            745.12,
+            266.5644728434503
+          ],
+          "anchor_cell": [
+            40,
+            46
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set04__U06697",
+          "angle": 90.0,
+          "anchor": [
+            2533.110000000001,
+            757.12
+          ],
+          "anchor_cell": [
+            89,
+            224
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set05__U06697",
+          "angle": 90.0,
+          "anchor": [
+            2567.1000000000017,
+            695.6803121623899
+          ],
+          "anchor_cell": [
+            82,
+            228
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set06__U06697",
+          "angle": 90.0,
+          "anchor": [
+            2601.0900000000024,
+            777.12
+          ],
+          "anchor_cell": [
+            91,
+            231
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set07__U06697",
+          "angle": 0.0,
+          "anchor": [
+            697.565,
+            277.12
+          ],
+          "anchor_cell": [
+            41,
+            41
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set08__U06697",
+          "angle": 90.0,
+          "anchor": [
+            1875.12,
+            781.8251419356011
+          ],
+          "anchor_cell": [
+            91,
+            158
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set09__U06697",
+          "angle": 90.0,
+          "anchor": [
+            2409.652172392226,
+            727.12
+          ],
+          "anchor_cell": [
+            86,
+            212
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set10__U06697",
+          "angle": 0.0,
+          "anchor": [
+            2705.12,
+            553.1164911262318
+          ],
+          "anchor_cell": [
+            68,
+            241
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set11__U06697",
+          "angle": 0.0,
+          "anchor": [
+            2766.5664472413764,
+            587.1923176879546
+          ],
+          "anchor_cell": [
+            73,
+            248
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set12__U06697",
+          "angle": 0.0,
+          "anchor": [
+            2785.12,
+            519.1264911262311
+          ],
+          "anchor_cell": [
+            65,
+            249
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set13__U06697",
+          "angle": 0.0,
+          "anchor": [
+            2846.69,
+            485.1377373837419
+          ],
+          "anchor_cell": [
+            61,
+            256
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set14__U06697",
+          "angle": 90.0,
+          "anchor": [
+            2861.9914472413775,
+            627.12
+          ],
+          "anchor_cell": [
+            76,
+            257
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set15__U06697",
+          "angle": 90.0,
+          "anchor": [
+            1434.340594702001,
+            20.343503936845195
+          ],
+          "anchor_cell": [
+            16,
+            114
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set16__U06697",
+          "angle": 90.0,
+          "anchor": [
+            2942.0596130986955,
+            264.6317055244669
+          ],
+          "anchor_cell": [
+            40,
+            265
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set17__U06697",
+          "angle": 0.0,
+          "anchor": [
+            1060.014016505331,
+            789.3273701208902
+          ],
+          "anchor_cell": [
+            92,
+            77
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set18__U06697",
+          "angle": 45.0,
+          "anchor": [
+            2888.318796423199,
+            1088.798277618149
+          ],
+          "anchor_cell": [
+            123,
+            259
+          ],
+          "via_lattice": false
+        }
+      ]
+    },
+    {
+      "board_id": "006_CY817_06_L0696162_Q1_66.73pct",
+      "board_index": 25,
+      "usage": 0.48068969711104576,
+      "q1_usage": 0.6482928144027051,
+      "status": "confirmed",
+      "placements": [
+        {
+          "piece_id": "set02__U00978",
+          "angle": 0.0,
+          "anchor": [
+            1409.0,
+            93.01000000000022
+          ],
+          "anchor_cell": [
+            17,
+            111
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set03__U00978",
+          "angle": 0.0,
+          "anchor": [
+            1409.0,
+            137.02000000000044
+          ],
+          "anchor_cell": [
+            22,
+            111
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set04__U00978",
+          "angle": 0.0,
+          "anchor": [
+            909.0,
+            597.37
+          ],
+          "anchor_cell": [
+            66,
+            61
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set05__U00978",
+          "angle": 0.0,
+          "anchor": [
+            909.0,
+            553.3599999999998
+          ],
+          "anchor_cell": [
+            62,
+            61
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set06__U00978",
+          "angle": 0.0,
+          "anchor": [
+            909.0,
+            509.34999999999957
+          ],
+          "anchor_cell": [
+            57,
+            61
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set07__U00978",
+          "angle": 0.0,
+          "anchor": [
+            909.0,
+            465.33999999999935
+          ],
+          "anchor_cell": [
+            53,
+            61
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set08__U00978",
+          "angle": 0.0,
+          "anchor": [
+            1089.0,
+            421.32999999999913
+          ],
+          "anchor_cell": [
+            48,
+            79
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set09__U00978",
+          "angle": 0.0,
+          "anchor": [
+            1369.0,
+            377.3199999999989
+          ],
+          "anchor_cell": [
+            44,
+            107
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set10__U00978",
+          "angle": 0.0,
+          "anchor": [
+            1369.0,
+            333.3099999999987
+          ],
+          "anchor_cell": [
+            40,
+            107
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set11__U00978",
+          "angle": 0.0,
+          "anchor": [
+            1369.0,
+            289.2999999999985
+          ],
+          "anchor_cell": [
+            35,
+            107
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set12__U00978",
+          "angle": 0.0,
+          "anchor": [
+            1069.0,
+            245.28999999999826
+          ],
+          "anchor_cell": [
+            31,
+            77
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set13__U00978",
+          "angle": 0.0,
+          "anchor": [
+            1489.0,
+            641.3800000000002
+          ],
+          "anchor_cell": [
+            72,
+            119
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set14__U00978",
+          "angle": 0.0,
+          "anchor": [
+            1529.0,
+            685.3900000000004
+          ],
+          "anchor_cell": [
+            76,
+            123
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set15__U00978",
+          "angle": 0.0,
+          "anchor": [
+            1728.9999999999998,
+            761.5400000000002
+          ],
+          "anchor_cell": [
+            84,
+            143
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set09__U00893__q1",
+          "angle": 270.0,
+          "anchor": [
+            2059.0,
+            522.2499999999992
+          ],
+          "anchor_cell": [
+            60,
+            176
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set10__U00893__q0",
+          "angle": 0.0,
+          "anchor": [
+            2503.348527350078,
+            147.52556589999438
+          ],
+          "anchor_cell": [
+            22,
+            221
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set10__U00893__q1",
+          "angle": 90.0,
+          "anchor": [
+            2738.578950056177,
+            502.98965535069624
+          ],
+          "anchor_cell": [
+            57,
+            244
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set11__U00893__q0",
+          "angle": 0.0,
+          "anchor": [
+            2669.0,
+            19.639999999999855
+          ],
+          "anchor_cell": [
+            10,
+            237
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set11__U00893__q1",
+          "angle": 180.0,
+          "anchor": [
+            2863.573307419953,
+            366.78923414159675
+          ],
+          "anchor_cell": [
+            44,
+            256
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set12__U00893__q0",
+          "angle": 180.0,
+          "anchor": [
+            2849.0,
+            715.8700000000001
+          ],
+          "anchor_cell": [
+            78,
+            255
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set12__U00893__q1",
+          "angle": 0.0,
+          "anchor": [
+            2828.1714607588615,
+            387.9031774137294
+          ],
+          "anchor_cell": [
+            46,
+            254
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set16__U06569",
+          "angle": 0.0,
+          "anchor": [
+            1079.0,
+            358.2599999999985
+          ],
+          "anchor_cell": [
+            44,
+            78
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set08__U04404",
+          "angle": 0.0,
+          "anchor": [
+            2339.0,
+            230.01000000000022
+          ],
+          "anchor_cell": [
+            31,
+            204
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set04__U02689",
+          "angle": 0.0,
+          "anchor": [
+            1121.854101363731,
+            150.66120700182992
+          ],
+          "anchor_cell": [
+            23,
+            83
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set05__U02689",
+          "angle": 180.0,
+          "anchor": [
+            2849.0,
+            795.5699999999999
+          ],
+          "anchor_cell": [
+            87,
+            255
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set06__U02689",
+          "angle": 180.0,
+          "anchor": [
+            2449.0,
+            795.5699999999999
+          ],
+          "anchor_cell": [
+            87,
+            215
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set07__U02689",
+          "angle": 270.0,
+          "anchor": [
+            2630.475034046891,
+            417.1201141667219
+          ],
+          "anchor_cell": [
+            49,
+            233
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set18__U02211__q0",
+          "angle": 0.0,
+          "anchor": [
+            1880.819688098211,
+            937.0474095135662
+          ],
+          "anchor_cell": [
+            100,
+            158
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set18__U02211__q1",
+          "angle": 180.0,
+          "anchor": [
+            2166.6355438644905,
+            884.4214537505322
+          ],
+          "anchor_cell": [
+            94,
+            187
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set19__U02211__q0",
+          "angle": 0.0,
+          "anchor": [
+            1871.5159681745918,
+            870.7427992975767
+          ],
+          "anchor_cell": [
+            93,
+            157
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set19__U02211__q1",
+          "angle": 180.0,
+          "anchor": [
+            1110.0561496435625,
+            196.78449262877075
+          ],
+          "anchor_cell": [
+            26,
+            81
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set20__U02211__q0",
+          "angle": 0.0,
+          "anchor": [
+            822.6372978288963,
+            249.8507560696673
+          ],
+          "anchor_cell": [
+            34,
+            52
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set20__U02211__q1",
+          "angle": 0.0,
+          "anchor": [
+            814.9365739536638,
+            183.10583817581517
+          ],
+          "anchor_cell": [
+            24,
+            52
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set19__U06697",
+          "angle": 0.0,
+          "anchor": [
+            1223.035,
+            287.12
+          ],
+          "anchor_cell": [
+            36,
+            93
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set20__U06697",
+          "angle": 90.0,
+          "anchor": [
+            809.0,
+            172.67083817581567
+          ],
+          "anchor_cell": [
+            25,
+            51
+          ],
+          "via_lattice": false
+        }
+      ]
+    },
+    {
+      "board_id": "004_CY817_17_L0696184_Q1_61.51pct",
+      "board_index": 24,
+      "usage": 0.4329508761718656,
+      "q1_usage": 0.6472352144301261,
+      "status": "confirmed",
+      "placements": [
+        {
+          "piece_id": "set16__U00978",
+          "angle": 0.0,
+          "anchor": [
+            1704.1107563905152,
+            293.7344333095899
+          ],
+          "anchor_cell": [
+            34,
+            138
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set17__U00978",
+          "angle": 0.0,
+          "anchor": [
+            1615.0,
+            249.7244333095897
+          ],
+          "anchor_cell": [
+            28,
+            130
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set18__U00978",
+          "angle": 0.0,
+          "anchor": [
+            1615.0,
+            205.71443330958948
+          ],
+          "anchor_cell": [
+            24,
+            130
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set19__U00978",
+          "angle": 0.0,
+          "anchor": [
+            1615.0,
+            161.70443330958926
+          ],
+          "anchor_cell": [
+            19,
+            130
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set20__U00978",
+          "angle": 0.0,
+          "anchor": [
+            1565.0,
+            337.74443330959014
+          ],
+          "anchor_cell": [
+            39,
+            125
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set13__U00893__q0",
+          "angle": 0.0,
+          "anchor": [
+            2510.4950410051406,
+            348.4432887890227
+          ],
+          "anchor_cell": [
+            39,
+            220
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set13__U00893__q1",
+          "angle": 0.0,
+          "anchor": [
+            1595.0,
+            339.40443330959
+          ],
+          "anchor_cell": [
+            39,
+            128
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set14__U00893__q0",
+          "angle": 180.0,
+          "anchor": [
+            1777.6776334040783,
+            643.4784596671848
+          ],
+          "anchor_cell": [
+            70,
+            148
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set14__U00893__q1",
+          "angle": 180.0,
+          "anchor": [
+            1614.283420366546,
+            645.9530020238965
+          ],
+          "anchor_cell": [
+            69,
+            128
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set15__U00893__q0",
+          "angle": 0.0,
+          "anchor": [
+            1431.727549504302,
+            340.1923730113595
+          ],
+          "anchor_cell": [
+            38,
+            110
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set15__U00893__q1",
+          "angle": 180.0,
+          "anchor": [
+            1451.010969870848,
+            646.7409417256661
+          ],
+          "anchor_cell": [
+            69,
+            112
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set16__U00893__q0",
+          "angle": 0.0,
+          "anchor": [
+            1775.0,
+            339.40443330959
+          ],
+          "anchor_cell": [
+            39,
+            146
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set16__U00893__q1",
+          "angle": 180.0,
+          "anchor": [
+            1957.6776334040783,
+            643.4784596671848
+          ],
+          "anchor_cell": [
+            70,
+            166
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set17__U00893__q0",
+          "angle": 0.0,
+          "anchor": [
+            1955.0,
+            339.40443330959
+          ],
+          "anchor_cell": [
+            39,
+            164
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set17__U00893__q1",
+          "angle": 180.0,
+          "anchor": [
+            2137.6776334040783,
+            643.4784596671848
+          ],
+          "anchor_cell": [
+            70,
+            184
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set18__U00893__q0",
+          "angle": 0.0,
+          "anchor": [
+            2135.0,
+            339.40443330959
+          ],
+          "anchor_cell": [
+            39,
+            182
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set18__U00893__q1",
+          "angle": 180.0,
+          "anchor": [
+            2317.6776334040783,
+            643.4784596671848
+          ],
+          "anchor_cell": [
+            70,
+            202
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set19__U00893__q0",
+          "angle": 0.0,
+          "anchor": [
+            2315.0,
+            339.40443330959
+          ],
+          "anchor_cell": [
+            39,
+            200
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set19__U00893__q1",
+          "angle": 0.0,
+          "anchor": [
+            1275.8229273126149,
+            238.90135009203857
+          ],
+          "anchor_cell": [
+            28,
+            95
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set20__U00893__q0",
+          "angle": 180.0,
+          "anchor": [
+            1295.1063476791608,
+            545.4499188063451
+          ],
+          "anchor_cell": [
+            60,
+            97
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set20__U00893__q1",
+          "angle": 0.0,
+          "anchor": [
+            1112.550476816917,
+            239.6892897938081
+          ],
+          "anchor_cell": [
+            28,
+            78
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set01__U01480",
+          "angle": 0.0,
+          "anchor": [
+            1776.1043487866955,
+            34.36747840047318
+          ],
+          "anchor_cell": [
+            8,
+            146
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set02__U01480",
+          "angle": 180.0,
+          "anchor": [
+            2005.0,
+            717.4184596671844
+          ],
+          "anchor_cell": [
+            77,
+            169
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set03__U01480",
+          "angle": 180.0,
+          "anchor": [
+            2595.0,
+            717.4184596671844
+          ],
+          "anchor_cell": [
+            77,
+            228
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set17__U06569",
+          "angle": 0.0,
+          "anchor": [
+            1420.98,
+            328.12
+          ],
+          "anchor_cell": [
+            37,
+            110
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set18__U06569",
+          "angle": 0.0,
+          "anchor": [
+            1614.7105384392285,
+            805.3467307234371
+          ],
+          "anchor_cell": [
+            85,
+            130
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set19__U06569",
+          "angle": 90.0,
+          "anchor": [
+            999.5604768169167,
+            218.12
+          ],
+          "anchor_cell": [
+            26,
+            68
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set20__U06569",
+          "angle": 0.0,
+          "anchor": [
+            1649.1804726323016,
+            928.1317429006525
+          ],
+          "anchor_cell": [
+            97,
+            133
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set09__U04404",
+          "angle": 0.0,
+          "anchor": [
+            2435.0020064251494,
+            103.97974170410696
+          ],
+          "anchor_cell": [
+            15,
+            212
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set10__U04404",
+          "angle": 0.0,
+          "anchor": [
+            1766.5576777984063,
+            802.9416930003076
+          ],
+          "anchor_cell": [
+            85,
+            145
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set11__U04404",
+          "angle": 90.0,
+          "anchor": [
+            2406.615371888062,
+            487.51854267677027
+          ],
+          "anchor_cell": [
+            53,
+            210
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set12__U04404",
+          "angle": 90.0,
+          "anchor": [
+            2325.6258005571026,
+            692.2058408889241
+          ],
+          "anchor_cell": [
+            74,
+            201
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set13__U04404",
+          "angle": 90.0,
+          "anchor": [
+            1521.7205384392296,
+            728.12
+          ],
+          "anchor_cell": [
+            77,
+            120
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set08__U02689",
+          "angle": 180.0,
+          "anchor": [
+            1565.0,
+            215.14999999999975
+          ],
+          "anchor_cell": [
+            25,
+            125
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set09__U02689",
+          "angle": 90.0,
+          "anchor": [
+            2643.231191663154,
+            397.989218011042
+          ],
+          "anchor_cell": [
+            44,
+            233
+          ],
+          "via_lattice": false
+        }
+      ]
+    },
+    {
+      "board_id": "003_CY817_08_L0696166_Q1_59.89pct",
+      "board_index": 23,
+      "usage": 0.37973061487477544,
+      "q1_usage": 0.5990651636390867,
+      "status": "confirmed",
+      "placements": [
+        {
+          "piece_id": "set04__U01480",
+          "angle": 180.0,
+          "anchor": [
+            2095.001204941176,
+            146.2752232942017
+          ],
+          "anchor_cell": [
+            14,
+            176
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set05__U01480",
+          "angle": 180.0,
+          "anchor": [
+            2070.90637309112,
+            187.86817080130209
+          ],
+          "anchor_cell": [
+            19,
+            174
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set06__U01480",
+          "angle": 180.0,
+          "anchor": [
+            2046.8115412410632,
+            229.46111830840246
+          ],
+          "anchor_cell": [
+            23,
+            171
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set07__U01480",
+          "angle": 180.0,
+          "anchor": [
+            2022.7167093910066,
+            271.05406581550284
+          ],
+          "anchor_cell": [
+            27,
+            169
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set08__U01480",
+          "angle": 180.0,
+          "anchor": [
+            1998.62187754095,
+            312.64701332260324
+          ],
+          "anchor_cell": [
+            31,
+            167
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set09__U01480",
+          "angle": 180.0,
+          "anchor": [
+            1974.5270456908934,
+            354.23996082970365
+          ],
+          "anchor_cell": [
+            35,
+            165
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set10__U01480",
+          "angle": 180.0,
+          "anchor": [
+            1950.4322138408368,
+            395.83290833680405
+          ],
+          "anchor_cell": [
+            40,
+            162
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set11__U01480",
+          "angle": 180.0,
+          "anchor": [
+            1926.3373819907802,
+            437.42585584390446
+          ],
+          "anchor_cell": [
+            44,
+            159
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set12__U01480",
+          "angle": 180.0,
+          "anchor": [
+            1902.2425501407236,
+            479.01880335100486
+          ],
+          "anchor_cell": [
+            48,
+            157
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set13__U01480",
+          "angle": 180.0,
+          "anchor": [
+            1878.147718290667,
+            520.6117508581052
+          ],
+          "anchor_cell": [
+            52,
+            154
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set14__U01480",
+          "angle": 180.0,
+          "anchor": [
+            1854.0528864406103,
+            562.2046983652056
+          ],
+          "anchor_cell": [
+            56,
+            153
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set15__U01480",
+          "angle": 180.0,
+          "anchor": [
+            1829.9580545905537,
+            603.7976458723059
+          ],
+          "anchor_cell": [
+            61,
+            149
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set16__U01480",
+          "angle": 180.0,
+          "anchor": [
+            1805.8632227404971,
+            645.3905933794063
+          ],
+          "anchor_cell": [
+            65,
+            147
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set17__U01480",
+          "angle": 180.0,
+          "anchor": [
+            1781.7683908904405,
+            686.9835408865066
+          ],
+          "anchor_cell": [
+            69,
+            145
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set18__U01480",
+          "angle": 180.0,
+          "anchor": [
+            1757.673559040384,
+            728.576488393607
+          ],
+          "anchor_cell": [
+            73,
+            142
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set19__U01480",
+          "angle": 180.0,
+          "anchor": [
+            1363.6696353441,
+            144.88854586321818
+          ],
+          "anchor_cell": [
+            14,
+            103
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set20__U01480",
+          "angle": 180.0,
+          "anchor": [
+            1339.5748034940434,
+            186.48149337031856
+          ],
+          "anchor_cell": [
+            19,
+            100
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set01__U01978",
+          "angle": 180.0,
+          "anchor": [
+            2394.109425044733,
+            603.2762431574208
+          ],
+          "anchor_cell": [
+            59,
+            206
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set02__U01978",
+          "angle": 180.0,
+          "anchor": [
+            2394.2925866789133,
+            641.7445950904356
+          ],
+          "anchor_cell": [
+            64,
+            206
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set03__U01978",
+          "angle": 180.0,
+          "anchor": [
+            2394.4757483130934,
+            680.2129470234504
+          ],
+          "anchor_cell": [
+            68,
+            206
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set04__U01978",
+          "angle": 180.0,
+          "anchor": [
+            1301.7870748842367,
+            232.10096998602228
+          ],
+          "anchor_cell": [
+            23,
+            97
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set05__U01978",
+          "angle": 180.0,
+          "anchor": [
+            1301.9702365184169,
+            270.5693219190371
+          ],
+          "anchor_cell": [
+            27,
+            97
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set06__U01978",
+          "angle": 180.0,
+          "anchor": [
+            1302.153398152597,
+            309.0376738520519
+          ],
+          "anchor_cell": [
+            31,
+            97
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set07__U01978",
+          "angle": 180.0,
+          "anchor": [
+            1302.3365597867771,
+            347.50602578506675
+          ],
+          "anchor_cell": [
+            35,
+            97
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set08__U01978",
+          "angle": 180.0,
+          "anchor": [
+            1302.5197214209572,
+            385.9743777180816
+          ],
+          "anchor_cell": [
+            39,
+            97
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set09__U01978",
+          "angle": 180.0,
+          "anchor": [
+            1302.7028830551374,
+            424.44272965109644
+          ],
+          "anchor_cell": [
+            43,
+            97
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set10__U01978",
+          "angle": 180.0,
+          "anchor": [
+            1302.8860446893175,
+            462.9110815841113
+          ],
+          "anchor_cell": [
+            47,
+            97
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set11__U01978",
+          "angle": 180.0,
+          "anchor": [
+            1303.0692063234976,
+            501.37943351712613
+          ],
+          "anchor_cell": [
+            50,
+            97
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set12__U01978",
+          "angle": 180.0,
+          "anchor": [
+            1303.2523679576777,
+            539.8477854501409
+          ],
+          "anchor_cell": [
+            54,
+            95
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set13__U01978",
+          "angle": 180.0,
+          "anchor": [
+            1279.7707036225052,
+            581.233771056622
+          ],
+          "anchor_cell": [
+            59,
+            92
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set14__U01978",
+          "angle": 180.0,
+          "anchor": [
+            2477.726608820251,
+            544.7828452589539
+          ],
+          "anchor_cell": [
+            52,
+            214
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set15__U01978",
+          "angle": 180.0,
+          "anchor": [
+            2477.5434471860713,
+            506.3144933259391
+          ],
+          "anchor_cell": [
+            48,
+            214
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set14__U04404",
+          "angle": 0.0,
+          "anchor": [
+            1015.7569637371048,
+            659.620068894787
+          ],
+          "anchor_cell": [
+            65,
+            68
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set15__U04404",
+          "angle": 0.0,
+          "anchor": [
+            2518.069723914152,
+            723.0164670035628
+          ],
+          "anchor_cell": [
+            71,
+            218
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set16__U04404",
+          "angle": 0.0,
+          "anchor": [
+            2205.755026257807,
+            780.4385303666719
+          ],
+          "anchor_cell": [
+            77,
+            187
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set17__U04404",
+          "angle": 0.0,
+          "anchor": [
+            541.9950214846599,
+            188.97468151289166
+          ],
+          "anchor_cell": [
+            18,
+            21
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set18__U04404",
+          "angle": 0.0,
+          "anchor": [
+            541.9950214846599,
+            281.96468151289145
+          ],
+          "anchor_cell": [
+            28,
+            21
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set19__U04404",
+          "angle": 0.0,
+          "anchor": [
+            541.9950214846599,
+            374.9546815128912
+          ],
+          "anchor_cell": [
+            37,
+            21
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set20__U04404",
+          "angle": 0.0,
+          "anchor": [
+            2135.0,
+            434.0544933259389
+          ],
+          "anchor_cell": [
+            41,
+            180
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set10__U02689",
+          "angle": 0.0,
+          "anchor": [
+            1584.9997311685886,
+            756.4733018367779
+          ],
+          "anchor_cell": [
+            74,
+            125
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set01__U05000",
+          "angle": 0.0,
+          "anchor": [
+            2125.0,
+            252.0644933259391
+          ],
+          "anchor_cell": [
+            23,
+            179
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set02__U05000",
+          "angle": 90.0,
+          "anchor": [
+            1470.3867093910076,
+            100.80406581550193
+          ],
+          "anchor_cell": [
+            8,
+            113
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set03__U05000",
+          "angle": 90.0,
+          "anchor": [
+            2115.923247523325,
+            289.11790527504337
+          ],
+          "anchor_cell": [
+            27,
+            178
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set04__U05000",
+          "angle": 90.0,
+          "anchor": [
+            725.0,
+            374.9546815128912
+          ],
+          "anchor_cell": [
+            37,
+            39
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set05__U05000",
+          "angle": 90.0,
+          "anchor": [
+            2605.0,
+            479.0364670035623
+          ],
+          "anchor_cell": [
+            46,
+            227
+          ],
+          "via_lattice": false
+        }
+      ]
+    },
+    {
+      "board_id": "001_CY817_03_L0696156_Q1_52.45pct",
+      "board_index": 22,
+      "usage": 0.20720174011404552,
+      "q1_usage": 0.37038170391651676,
+      "status": "confirmed",
+      "placements": [
+        {
+          "piece_id": "set16__U01978",
+          "angle": 270.0,
+          "anchor": [
+            2490.6807672134883,
+            582.4606322747948
+          ],
+          "anchor_cell": [
+            65,
+            214
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set17__U01978",
+          "angle": 90.0,
+          "anchor": [
+            2632.9484777448915,
+            90.71420127637693
+          ],
+          "anchor_cell": [
+            15,
+            229
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set18__U01978",
+          "angle": 90.0,
+          "anchor": [
+            2671.5765949958814,
+            92.62694960665281
+          ],
+          "anchor_cell": [
+            15,
+            234
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set19__U01978",
+          "angle": 0.0,
+          "anchor": [
+            2097.178459811999,
+            663.7509724682768
+          ],
+          "anchor_cell": [
+            73,
+            175
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set20__U01978",
+          "angle": 180.0,
+          "anchor": [
+            2224.582059144311,
+            735.8528252217452
+          ],
+          "anchor_cell": [
+            81,
+            188
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set11__U02689",
+          "angle": 90.0,
+          "anchor": [
+            1810.9194249521872,
+            290.4904097244213
+          ],
+          "anchor_cell": [
+            34,
+            146
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set12__U02689",
+          "angle": 270.0,
+          "anchor": [
+            1742.889500982247,
+            678.1081013429211
+          ],
+          "anchor_cell": [
+            73,
+            139
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set13__U02689",
+          "angle": 90.0,
+          "anchor": [
+            1703.8263995964505,
+            100.54426961631077
+          ],
+          "anchor_cell": [
+            17,
+            136
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set14__U02689",
+          "angle": 270.0,
+          "anchor": [
+            1830.003993036843,
+            521.1136050459746
+          ],
+          "anchor_cell": [
+            58,
+            149
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set15__U02689",
+          "angle": 90.0,
+          "anchor": [
+            1898.0338956927342,
+            133.4712909404558
+          ],
+          "anchor_cell": [
+            19,
+            155
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set16__U02689",
+          "angle": 270.0,
+          "anchor": [
+            1917.0432354283691,
+            571.1284724451832
+          ],
+          "anchor_cell": [
+            63,
+            158
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set17__U02689",
+          "angle": 90.0,
+          "anchor": [
+            1985.0731380842603,
+            183.48615833966437
+          ],
+          "anchor_cell": [
+            24,
+            164
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set18__U02689",
+          "angle": 180.0,
+          "anchor": [
+            1659.120368186875,
+            446.3630255702929
+          ],
+          "anchor_cell": [
+            51,
+            131
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set19__U02689",
+          "angle": 90.0,
+          "anchor": [
+            1660.351228483465,
+            461.1121207400291
+          ],
+          "anchor_cell": [
+            52,
+            130
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set20__U02689",
+          "angle": 270.0,
+          "anchor": [
+            1592.3213045135249,
+            848.729812358529
+          ],
+          "anchor_cell": [
+            91,
+            124
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set06__U05000",
+          "angle": 90.0,
+          "anchor": [
+            1669.8115724634858,
+            141.12082752108847
+          ],
+          "anchor_cell": [
+            20,
+            131
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set07__U05000",
+          "angle": 0.0,
+          "anchor": [
+            1429.12,
+            465.4730255702926
+          ],
+          "anchor_cell": [
+            53,
+            108
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set08__U05000",
+          "angle": 90.0,
+          "anchor": [
+            1559.12,
+            554.4730255702925
+          ],
+          "anchor_cell": [
+            62,
+            121
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set09__U05000",
+          "angle": 90.0,
+          "anchor": [
+            1469.1192080935716,
+            261.35143105325733
+          ],
+          "anchor_cell": [
+            31,
+            112
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set10__U05000",
+          "angle": 90.0,
+          "anchor": [
+            1819.12,
+            139.5004097244206
+          ],
+          "anchor_cell": [
+            19,
+            147
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set11__U05000",
+          "angle": 0.0,
+          "anchor": [
+            1429.8215724634842,
+            141.12
+          ],
+          "anchor_cell": [
+            20,
+            107
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set12__U05000",
+          "angle": 90.0,
+          "anchor": [
+            1579.12,
+            705.4630255702932
+          ],
+          "anchor_cell": [
+            77,
+            123
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set13__U05000",
+          "angle": 90.0,
+          "anchor": [
+            2469.112633734992,
+            14.972115224376958
+          ],
+          "anchor_cell": [
+            8,
+            212
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set14__U05000",
+          "angle": 90.0,
+          "anchor": [
+            2084.0240005332,
+            209.22727187899667
+          ],
+          "anchor_cell": [
+            26,
+            174
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set15__U05000",
+          "angle": 90.0,
+          "anchor": [
+            2173.0240005332,
+            209.17807683255702
+          ],
+          "anchor_cell": [
+            27,
+            183
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set16__U05000",
+          "angle": 90.0,
+          "anchor": [
+            2262.0240005332,
+            209.12888178611738
+          ],
+          "anchor_cell": [
+            27,
+            192
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set17__U05000",
+          "angle": 90.0,
+          "anchor": [
+            2351.0240005332,
+            209.07968673967773
+          ],
+          "anchor_cell": [
+            27,
+            201
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set18__U05000",
+          "angle": 0.0,
+          "anchor": [
+            2364.4619656773,
+            321.70688262122667
+          ],
+          "anchor_cell": [
+            38,
+            201
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set19__U05000",
+          "angle": 0.0,
+          "anchor": [
+            2213.4719656772995,
+            371.12
+          ],
+          "anchor_cell": [
+            43,
+            186
+          ],
+          "via_lattice": false
+        },
+        {
+          "piece_id": "set20__U05000",
+          "angle": 0.0,
+          "anchor": [
+            2213.4719656772995,
+            460.12
+          ],
+          "anchor_cell": [
+            53,
+            186
+          ],
+          "via_lattice": false
+        }
+      ]
+    }
+  ],
+  "rejected_boards": [],
+  "current_board": [],
+  "remaining_piece_ids": [],
+  "bag_sets": 20,
+  "cell_size": 10.0,
+  "q1_usage_mean": 0.645357216823473,
+  "mdp_style": "raster_conservative_gspe_multi_leather"
+}

@@ -5,7 +5,13 @@
       "Bash(python3 src/schedule_main.py)",
       "Bash(python3 src/main.py)",
       "Bash(pip install *)",
-      "Bash(python3 -c \"import cv2; print\\(cv2.__version__\\)\")"
+      "Bash(python3 -c \"import cv2; print\\(cv2.__version__\\)\")",
+      "Bash(python -c \"import shapely; print\\(shapely.__version__\\)\")",
+      "Bash(del \"C:\\\\Users\\\\User\\\\Desktop\\\\PK-code2\\\\dataset\\\\effective_areas.json\")",
+      "Bash(python -c ' *)",
+      "Skill(artifact-design)",
+      "Skill(artifact-design:*)",
+      "Bash(python -c \"import sys; sys.path.insert\\(0,'src'\\); from data.preprocessing import demand, pieces, leathers; print\\('demand:', list\\(demand.items\\(\\)\\)[:3]\\); print\\('pieces:', list\\(pieces.items\\(\\)\\)[:3]\\); print\\('leathers:', list\\(leathers.keys\\(\\)\\)[:3]\\)\")"
     ]
   }
 }

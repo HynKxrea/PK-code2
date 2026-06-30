@@ -1,178 +1,155 @@
 {
   "selected": [
     "003",
-    "007",
+    "004",
+    "006",
     "008",
-    "019",
     "020",
     "024",
-    "025",
     "028"
   ],
   "selected_codes": [
     "L0696166",
-    "L0696178",
+    "L0696184",
+    "L0696162",
     "L0696174",
-    "L0696182",
     "L09169692",
     "L09169720",
-    "L09169716",
     "L09169718"
   ],
   "assignment": [
     {
       "Piece": "FLAP TOP",
       "Leather": "003",
-      "Qty": 1.49,
+      "Qty": 1.48,
       "RequiredQuality": 1,
       "LeatherCode": "L0696166"
     },
     {
       "Piece": "FLAP TOP",
-      "Leather": "007",
-      "Qty": 1.29,
+      "Leather": "006",
+      "Qty": 3.77,
       "RequiredQuality": 1,
-      "LeatherCode": "L0696178"
+      "LeatherCode": "L0696162"
     },
     {
       "Piece": "FLAP TOP",
       "Leather": "020",
-      "Qty": 8.18,
+      "Qty": 6.5,
       "RequiredQuality": 1,
       "LeatherCode": "L09169692"
     },
     {
       "Piece": "FLAP TOP",
+      "Leather": "024",
+      "Qty": 4.65,
+      "RequiredQuality": 1,
+      "LeatherCode": "L09169720"
+    },
+    {
+      "Piece": "FLAP TOP",
       "Leather": "028",
-      "Qty": 9.04,
+      "Qty": 3.82,
       "RequiredQuality": 1,
       "LeatherCode": "L09169718"
     },
     {
       "Piece": "BOTTOM",
-      "Leather": "007",
-      "Qty": 15.84,
-      "RequiredQuality": 4,
-      "LeatherCode": "L0696178"
-    },
-    {
-      "Piece": "BOTTOM",
-      "Leather": "025",
-      "Qty": 4.16,
-      "RequiredQuality": 4,
-      "LeatherCode": "L09169716"
-    },
-    {
-      "Piece": "GUSSET",
-      "Leather": "007",
-      "Qty": 5.6,
-      "RequiredQuality": 2,
-      "LeatherCode": "L0696178"
-    },
-    {
-      "Piece": "GUSSET",
-      "Leather": "008",
-      "Qty": 9.53,
-      "RequiredQuality": 2,
-      "LeatherCode": "L0696174"
-    },
-    {
-      "Piece": "GUSSET",
-      "Leather": "019",
-      "Qty": 24.87,
-      "RequiredQuality": 2,
-      "LeatherCode": "L0696182"
-    },
-    {
-      "Piece": "FLAP TOP BIDNING",
       "Leather": "003",
-      "Qty": 11.91,
-      "RequiredQuality": 1,
+      "Qty": 20.0,
+      "RequiredQuality": 4,
       "LeatherCode": "L0696166"
     },
     {
-      "Piece": "FLAP TOP BIDNING",
+      "Piece": "GUSSET",
+      "Leather": "004",
+      "Qty": 33.51,
+      "RequiredQuality": 2,
+      "LeatherCode": "L0696184"
+    },
+    {
+      "Piece": "GUSSET",
       "Leather": "024",
-      "Qty": 8.09,
-      "RequiredQuality": 1,
+      "Qty": 6.49,
+      "RequiredQuality": 2,
       "LeatherCode": "L09169720"
+    },
+    {
+      "Piece": "FLAP TOP BIDNING",
+      "Leather": "006",
+      "Qty": 1.14,
+      "RequiredQuality": 1,
+      "LeatherCode": "L0696162"
+    },
+    {
+      "Piece": "FLAP TOP BIDNING",
+      "Leather": "008",
+      "Qty": 18.86,
+      "RequiredQuality": 1,
+      "LeatherCode": "L0696174"
     },
     {
       "Piece": "FRONT HANDLE TOP",
-      "Leather": "025",
+      "Leather": "020",
       "Qty": 20.0,
       "RequiredQuality": 1,
-      "LeatherCode": "L09169716"
+      "LeatherCode": "L09169692"
     },
     {
       "Piece": "BACK HANDLE TOP",
-      "Leather": "008",
+      "Leather": "006",
       "Qty": 20.0,
       "RequiredQuality": 1,
-      "LeatherCode": "L0696174"
+      "LeatherCode": "L0696162"
     },
     {
       "Piece": "HANDLE RIGHT FACING",
       "Leather": "003",
-      "Qty": 27.49,
+      "Qty": 40.0,
       "RequiredQuality": 2,
       "LeatherCode": "L0696166"
     },
     {
-      "Piece": "HANDLE RIGHT FACING",
-      "Leather": "024",
-      "Qty": 12.51,
-      "RequiredQuality": 2,
-      "LeatherCode": "L09169720"
-    },
-    {
       "Piece": "HANDLE LEFT FACING",
-      "Leather": "008",
-      "Qty": 24.61,
+      "Leather": "004",
+      "Qty": 40.0,
       "RequiredQuality": 2,
-      "LeatherCode": "L0696174"
-    },
-    {
-      "Piece": "HANDLE LEFT FACING",
-      "Leather": "020",
-      "Qty": 4.62,
-      "RequiredQuality": 2,
-      "LeatherCode": "L09169692"
-    },
-    {
-      "Piece": "HANDLE LEFT FACING",
-      "Leather": "025",
-      "Qty": 10.77,
-      "RequiredQuality": 2,
-      "LeatherCode": "L09169716"
+      "LeatherCode": "L0696184"
     },
     {
       "Piece": "BACK SLASH POCKET INTERIOR PATCH",
-      "Leather": "019",
+      "Leather": "003",
       "Qty": 2.0,
       "RequiredQuality": 1,
-      "LeatherCode": "L0696182"
+      "LeatherCode": "L0696166"
     },
     {
       "Piece": "BACK SLASH POCKET INTERIOR PATCH",
-      "Leather": "025",
+      "Leather": "024",
       "Qty": 18.0,
       "RequiredQuality": 1,
-      "LeatherCode": "L09169716"
+      "LeatherCode": "L09169720"
     },
     {
       "Piece": "GUSSET LEFT RIGHT ANCHOR",
       "Leather": "003",
-      "Qty": 3.0,
+      "Qty": 2.0,
       "RequiredQuality": 2,
       "LeatherCode": "L0696166"
     },
     {
       "Piece": "GUSSET LEFT RIGHT ANCHOR",
-      "Leather": "007",
-      "Qty": 2.01,
+      "Leather": "004",
+      "Qty": 3.0,
       "RequiredQuality": 2,
-      "LeatherCode": "L0696178"
+      "LeatherCode": "L0696184"
+    },
+    {
+      "Piece": "GUSSET LEFT RIGHT ANCHOR",
+      "Leather": "006",
+      "Qty": 3.0,
+      "RequiredQuality": 2,
+      "LeatherCode": "L0696162"
     },
     {
       "Piece": "GUSSET LEFT RIGHT ANCHOR",
@@ -183,15 +160,8 @@
     },
     {
       "Piece": "GUSSET LEFT RIGHT ANCHOR",
-      "Leather": "019",
-      "Qty": 3.0,
-      "RequiredQuality": 2,
-      "LeatherCode": "L0696182"
-    },
-    {
-      "Piece": "GUSSET LEFT RIGHT ANCHOR",
       "Leather": "020",
-      "Qty": 2.99,
+      "Qty": 3.0,
       "RequiredQuality": 2,
       "LeatherCode": "L09169692"
     },
@@ -204,167 +174,181 @@
     },
     {
       "Piece": "GUSSET LEFT RIGHT ANCHOR",
-      "Leather": "025",
+      "Leather": "028",
       "Qty": 3.0,
       "RequiredQuality": 2,
-      "LeatherCode": "L09169716"
-    },
-    {
-      "Piece": "FRONT WRAP SNAP",
-      "Leather": "007",
-      "Qty": 37.94,
-      "RequiredQuality": 1,
-      "LeatherCode": "L0696178"
-    },
-    {
-      "Piece": "FRONT WRAP SNAP",
-      "Leather": "019",
-      "Qty": 42.06,
-      "RequiredQuality": 1,
-      "LeatherCode": "L0696182"
-    },
-    {
-      "Piece": "BACK WRAP SNAP",
-      "Leather": "007",
-      "Qty": 40.0,
-      "RequiredQuality": 1,
-      "LeatherCode": "L0696178"
-    },
-    {
-      "Piece": "FRONT RIGHT ANCHOR TOP",
-      "Leather": "003",
-      "Qty": 5.0,
-      "RequiredQuality": 1,
-      "LeatherCode": "L0696166"
-    },
-    {
-      "Piece": "FRONT RIGHT ANCHOR TOP",
-      "Leather": "007",
-      "Qty": 5.0,
-      "RequiredQuality": 1,
-      "LeatherCode": "L0696178"
-    },
-    {
-      "Piece": "FRONT RIGHT ANCHOR TOP",
-      "Leather": "008",
-      "Qty": 5.0,
-      "RequiredQuality": 1,
-      "LeatherCode": "L0696174"
-    },
-    {
-      "Piece": "FRONT RIGHT ANCHOR TOP",
-      "Leather": "019",
-      "Qty": 3.03,
-      "RequiredQuality": 1,
-      "LeatherCode": "L0696182"
-    },
-    {
-      "Piece": "FRONT RIGHT ANCHOR TOP",
-      "Leather": "024",
-      "Qty": 1.97,
-      "RequiredQuality": 1,
-      "LeatherCode": "L09169720"
-    },
-    {
-      "Piece": "FLAP FACING SNAP PATCH",
-      "Leather": "024",
-      "Qty": 20.0,
-      "RequiredQuality": 4,
-      "LeatherCode": "L09169720"
-    },
-    {
-      "Piece": "BACK SNAP PATCH",
-      "Leather": "008",
-      "Qty": 10.0,
-      "RequiredQuality": 1,
-      "LeatherCode": "L0696174"
-    },
-    {
-      "Piece": "BACK SNAP PATCH",
-      "Leather": "025",
-      "Qty": 10.0,
-      "RequiredQuality": 1,
-      "LeatherCode": "L09169716"
-    },
-    {
-      "Piece": "HANGTAG TOP",
-      "Leather": "019",
-      "Qty": 6.14,
-      "RequiredQuality": 1,
-      "LeatherCode": "L0696182"
-    },
-    {
-      "Piece": "HANGTAG TOP",
-      "Leather": "028",
-      "Qty": 13.86,
-      "RequiredQuality": 1,
       "LeatherCode": "L09169718"
     },
     {
-      "Piece": "HANGTAG FACING",
-      "Leather": "007",
+      "Piece": "FRONT WRAP SNAP",
+      "Leather": "006",
+      "Qty": 80.0,
+      "RequiredQuality": 1,
+      "LeatherCode": "L0696162"
+    },
+    {
+      "Piece": "BACK WRAP SNAP",
+      "Leather": "006",
+      "Qty": 40.0,
+      "RequiredQuality": 1,
+      "LeatherCode": "L0696162"
+    },
+    {
+      "Piece": "FRONT RIGHT ANCHOR TOP",
+      "Leather": "003",
+      "Qty": 5.0,
+      "RequiredQuality": 1,
+      "LeatherCode": "L0696166"
+    },
+    {
+      "Piece": "FRONT RIGHT ANCHOR TOP",
+      "Leather": "004",
+      "Qty": 5.0,
+      "RequiredQuality": 1,
+      "LeatherCode": "L0696184"
+    },
+    {
+      "Piece": "FRONT RIGHT ANCHOR TOP",
+      "Leather": "006",
+      "Qty": 5.0,
+      "RequiredQuality": 1,
+      "LeatherCode": "L0696162"
+    },
+    {
+      "Piece": "FRONT RIGHT ANCHOR TOP",
+      "Leather": "008",
+      "Qty": 5.0,
+      "RequiredQuality": 1,
+      "LeatherCode": "L0696174"
+    },
+    {
+      "Piece": "FLAP FACING SNAP PATCH",
+      "Leather": "028",
       "Qty": 20.0,
       "RequiredQuality": 4,
-      "LeatherCode": "L0696178"
+      "LeatherCode": "L09169718"
+    },
+    {
+      "Piece": "BACK SNAP PATCH",
+      "Leather": "006",
+      "Qty": 10.0,
+      "RequiredQuality": 1,
+      "LeatherCode": "L0696162"
+    },
+    {
+      "Piece": "BACK SNAP PATCH",
+      "Leather": "024",
+      "Qty": 10.0,
+      "RequiredQuality": 1,
+      "LeatherCode": "L09169720"
+    },
+    {
+      "Piece": "HANGTAG TOP",
+      "Leather": "006",
+      "Qty": 1.69,
+      "RequiredQuality": 1,
+      "LeatherCode": "L0696162"
+    },
+    {
+      "Piece": "HANGTAG TOP",
+      "Leather": "008",
+      "Qty": 18.31,
+      "RequiredQuality": 1,
+      "LeatherCode": "L0696174"
+    },
+    {
+      "Piece": "HANGTAG FACING",
+      "Leather": "003",
+      "Qty": 0.89,
+      "RequiredQuality": 4,
+      "LeatherCode": "L0696166"
+    },
+    {
+      "Piece": "HANGTAG FACING",
+      "Leather": "004",
+      "Qty": 2.31,
+      "RequiredQuality": 4,
+      "LeatherCode": "L0696184"
+    },
+    {
+      "Piece": "HANGTAG FACING",
+      "Leather": "008",
+      "Qty": 7.38,
+      "RequiredQuality": 4,
+      "LeatherCode": "L0696174"
+    },
+    {
+      "Piece": "HANGTAG FACING",
+      "Leather": "024",
+      "Qty": 5.81,
+      "RequiredQuality": 4,
+      "LeatherCode": "L09169720"
+    },
+    {
+      "Piece": "HANGTAG FACING",
+      "Leather": "028",
+      "Qty": 3.62,
+      "RequiredQuality": 4,
+      "LeatherCode": "L09169718"
+    },
+    {
+      "Piece": "SS FLOATING SOLID GLUE FILLER",
+      "Leather": "006",
+      "Qty": 15.09,
+      "RequiredQuality": 4,
+      "LeatherCode": "L0696162"
     },
     {
       "Piece": "SS FLOATING SOLID GLUE FILLER",
       "Leather": "020",
-      "Qty": 19.93,
+      "Qty": 4.91,
       "RequiredQuality": 4,
       "LeatherCode": "L09169692"
     },
     {
-      "Piece": "SS FLOATING SOLID GLUE FILLER",
-      "Leather": "025",
-      "Qty": 0.07,
-      "RequiredQuality": 4,
-      "LeatherCode": "L09169716"
-    },
-    {
       "Piece": "LONG SS MOOR KEEPER",
       "Leather": "003",
-      "Qty": 10.9,
+      "Qty": 9.9,
       "RequiredQuality": 4,
       "LeatherCode": "L0696166"
     },
     {
       "Piece": "LONG SS MOOR KEEPER",
+      "Leather": "004",
+      "Qty": 1.93,
+      "RequiredQuality": 4,
+      "LeatherCode": "L0696184"
+    },
+    {
+      "Piece": "LONG SS MOOR KEEPER",
       "Leather": "008",
-      "Qty": 9.1,
+      "Qty": 8.18,
       "RequiredQuality": 4,
       "LeatherCode": "L0696174"
     },
     {
       "Piece": "SS ANCHOR",
-      "Leather": "019",
-      "Qty": 19.15,
+      "Leather": "028",
+      "Qty": 20.0,
       "RequiredQuality": 4,
-      "LeatherCode": "L0696182"
-    },
-    {
-      "Piece": "SS ANCHOR",
-      "Leather": "020",
-      "Qty": 0.85,
-      "RequiredQuality": 4,
-      "LeatherCode": "L09169692"
+      "LeatherCode": "L09169718"
     },
     {
       "Piece": "SHORT SS D RING ANCHOR",
       "Leather": "003",
-      "Qty": 19.0,
+      "Qty": 8.31,
       "RequiredQuality": 4,
       "LeatherCode": "L0696166"
     },
     {
       "Piece": "SHORT SS D RING ANCHOR",
-      "Leather": "007",
-      "Qty": 1.0,
+      "Leather": "006",
+      "Qty": 11.69,
       "RequiredQuality": 4,
-      "LeatherCode": "L0696178"
+      "LeatherCode": "L0696162"
     }
   ],
-  "objective_value": 107283158.89294274,
+  "objective_value": 121351619.24773368,
   "scores": {
     "001": 16407813.95,
     "002": 18395869.84,

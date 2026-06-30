@@ -1,6 +1,11 @@
 {
+  "q_mode": "effective",
   "method": "geometric",
   "direction": "minimize",
+  "weighted_sum": {
+    "weights": [10, 8, 6, 4],
+    "normalize": false
+  },
   "geometric": {
     "weights": [10, 8, 6, 4],
     "fragmentation_weight": 0.2,

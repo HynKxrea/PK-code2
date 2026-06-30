@@ -16,17 +16,18 @@ class Scorer(ABC):
 class WeightedSumScorer(Scorer):
     def __init__(self, weights, normalize=False):
         self.weights = np.array(weights, dtype=float)
-        if self.weights.shape[0] != 5:
-            raise ValueError("weights must be length 5 for Q1..Q5")
+        if self.weights.shape[0] not in (4, 5):
+            raise ValueError("weights must be length 4 or 5 for Q1..Q4(Q5)")
         self.normalize = bool(normalize)
 
     def score_leather(self, quality_areas, geo_info=None):
+        n = len(self.weights)
         qa = np.array(quality_areas, dtype=float)
-        if qa.shape[0] < 5:
-            qa = np.pad(qa, (0, 5 - qa.shape[0]))
-        s = float(np.dot(self.weights, qa))
+        if qa.shape[0] < n:
+            qa = np.pad(qa, (0, n - qa.shape[0]))
+        s = float(np.dot(self.weights, qa[:n]))
         if self.normalize:
-            total = qa.sum()
+            total = qa[:n].sum()
             if total > 0:
                 s = s / total
         return s
@@ -53,37 +54,36 @@ class GeometricScorer(Scorer):
         self.normalize = bool(normalize)
 
     def score_leather(self, quality_areas, geo_info=None):
+        qa = np.array(quality_areas, dtype=float)
+        if qa.shape[0] < 4:
+            qa = np.pad(qa, (0, 4 - qa.shape[0]))
+
+        # Q는 항상 raw 면적 기반 가중합
+        base = float(np.dot(self.weights, qa[:4]))
+
         if geo_info is None:
-            # fallback: raw 면적 가중합
-            qa = np.array(quality_areas, dtype=float)
-            if qa.shape[0] < 4:
-                qa = np.pad(qa, (0, 4 - qa.shape[0]))
-            return float(np.dot(self.weights, qa[:4]))
+            # 파편화 정보 없으면 페널티 없이 raw 가중합만
+            return base
 
-        effective = geo_info["effective"]          # [Q1_eff, Q1Q2_eff, Q1Q2Q3_eff, Q1Q2Q3Q4_eff]
-        ratios    = geo_info["largest_blob_ratio"] # [r1, r2, r3, r4]
+        # 파편화 패널티만 geo_info에서 계산 (Q에는 raw 면적 유지)
+        ratios   = geo_info["largest_blob_ratio"]  # [r1, r2, r3, r4]
+        effective = geo_info["effective"]           # 면적 가중치 계산용
 
-        # 품질 레벨별 증분 유효 면적
         eff_inc = [
             effective[0],
             effective[1] - effective[0],
             effective[2] - effective[1],
             effective[3] - effective[2],
         ]
-
-        # 유효 면적 가중합 (Level 1)
-        base = float(np.dot(self.weights, eff_inc))
-
-        # 파편화 패널티 (Level 2): 면적 가중 평균 blob ratio
-        # blob_ratio=1(덩어리 하나) → factor=1.0 (패널티 없음)
-        # blob_ratio=0(완전 조각) → factor=1-frag_weight (점수 낮아짐 = minimize에서 먼저 소모)
         total_eff = sum(eff_inc) + 1e-9
         frag_ratio = sum(r * e for r, e in zip(ratios, eff_inc)) / total_eff
         penalty_factor = (1.0 - self.fragmentation_weight) + self.fragmentation_weight * frag_ratio
 
         score = base * penalty_factor
 
-        if self.normalize and total_eff > 1e-6:
-            score /= total_eff
+        if self.normalize:
+            total_raw = qa[:4].sum()
+            if total_raw > 1e-6:
+                score /= total_raw
 
         return score

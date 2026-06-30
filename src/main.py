@@ -131,6 +131,7 @@ def main():
     assignment_df = result['assignment_df']
 
     print(f"Selected Leathers: {len(selected)} / {len(leathers)}\n")
+    print("Selected: " + ", ".join(_disp_leather(l) for l in selected) + "\n")
 
     for idx, leather in enumerate(selected, start=1):
         leather_rows = assignment_df[assignment_df['Leather'] == leather]
